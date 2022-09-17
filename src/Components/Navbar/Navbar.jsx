@@ -33,7 +33,7 @@ import { MoonIcon, SunIcon,HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 //   </Link>
 // );
 
-export default function Navbar({aboutRef,skillsRef,colorMode,toggleColorMode}) {
+export default function Navbar({homeRef,aboutRef,skillsRef,colorMode,toggleColorMode}) {
   // const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -42,7 +42,7 @@ export default function Navbar({aboutRef,skillsRef,colorMode,toggleColorMode}) {
     <>
     {/* background-image: linear-gradient(to right, #c1c8e4, #b8c9e8, #aec9ea, #a3cbec, #96cced, #8dcbed, #83caec, #79c9eb, #71c5eb, #69c1ea, #62bdea, #5ab9ea); */}
     {/* radial-gradient(circle, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1) */}
-      <Box pos='sticky' top='0'  bg={useColorModeValue('linear-gradient(to left, #c1c8e4, #b8c9e8, #aec9ea, #a3cbec, #96cced, #8dcbed, #83caec, #79c9eb, #71c5eb, #69c1ea, #62bdea, #5ab9ea)', 'linear-gradient(to right, #25274d, #2b2d52, #313356, #383a5b, #3e4060, #404565, #414a6b, #434f70, #3f5477, #3a597e, #335f84, #29648a);')} px={4}>
+      <Box w={'100%'} position='sticky' top={0} zIndex={999}  bg={useColorModeValue('linear-gradient(to left, #c1c8e4, #b8c9e8, #aec9ea, #a3cbec, #96cced, #8dcbed, #83caec, #79c9eb, #71c5eb, #69c1ea, #62bdea, #5ab9ea)', 'linear-gradient(to right, #25274d, #2b2d52, #313356, #383a5b, #3e4060, #404565, #414a6b, #434f70, #3f5477, #3a597e, #335f84, #29648a);')} px={4}>
         <Flex   h={16} alignItems={'center'} justifyContent={'space-between'}>
         <IconButton
 
@@ -64,7 +64,7 @@ export default function Navbar({aboutRef,skillsRef,colorMode,toggleColorMode}) {
               ))} */}
               <Box _hover={{ cursor: 'pointer', borderBottom: '2px solid #6889FF' }}
               onClick={() => {
-                aboutRef.current.scrollIntoView(
+                homeRef.current.scrollIntoView(
                     {
                         behavior: "smooth",
                     }
@@ -72,7 +72,7 @@ export default function Navbar({aboutRef,skillsRef,colorMode,toggleColorMode}) {
                   }}>Home</Box>
               <Box _hover={{ cursor: 'pointer', borderBottom: '2px solid #6889FF' }}
               onClick={() => {
-                skillsRef.current.scrollIntoView(
+                aboutRef.current.scrollIntoView(
                     {
                         behavior: "smooth",
                     }
@@ -102,9 +102,9 @@ export default function Navbar({aboutRef,skillsRef,colorMode,toggleColorMode}) {
                 // cursor={'pointer'}
                 minW={0}>
                 <Avatar
-                boxSize='50px'
+                boxSize='40px'
                   size={'sm'}
-                  src='https://avatars.githubusercontent.com/u/104049398?v=4'
+                  src='https://user-images.githubusercontent.com/104049398/190843442-025788f2-ef6d-417f-b728-6222df2505f8.JPG'
                 />
               </Box>
               {/* <MenuList>
@@ -125,7 +125,7 @@ export default function Navbar({aboutRef,skillsRef,colorMode,toggleColorMode}) {
               ))} */}
                <Box _hover={{ cursor: 'pointer', borderBottom: '2px solid #6889FF' }}
               onClick={() => {
-                aboutRef.current.scrollIntoView(
+                homeRef.current.scrollIntoView(
                     {
                         behavior: "smooth",
                     }
@@ -146,7 +146,6 @@ export default function Navbar({aboutRef,skillsRef,colorMode,toggleColorMode}) {
           </Box>
         ) : null}
       </Box>
-      
     </>
   );
 }

@@ -1,161 +1,88 @@
+import React from 'react'
 import {
-    Stack,
-    Flex,
-    Button,
-    Text,
     Box,
-    VStack,
+    Button,
+    Flex,
+    Heading,
+    Image,
+    Stack,
+    Text,
     useBreakpointValue,
-    Center,
-    Link,
-    // useMediaQuery,
   } from '@chakra-ui/react';
-  import { BsGithub} from 'react-icons/bs'
-  import { BsLinkedin} from 'react-icons/bs'
- import styles from "./About.module.css"
-
+  import styles from "./About.module.css"
   
-  export default function About({aboutRef,colorMode}) {
-    // const [isLargerThan900] = useMediaQuery('(min-width: 900px)');
-
-    // const Letters = ['Hi I am Mohamed Haris']
-    return (  
-      <Center  ref={aboutRef}>
-        {/* {isLargerThan900 ?  */}
-        <Flex
-        // ref={aboutRef} 
-          w={'full'}
-          h={'90vh'}
-          backgroundImage={
-            'url(https://images.unsplash.com/photo-1510511459019-5dda7724fd87?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80)'
-          }
-          backgroundSize={'cover'}
-          backgroundPosition={'center center'}>
-          
-          <VStack
-          
-          // border='1px red solid'
-            w={'80%'}
-            margin='auto'
-            justify={'center'}
-            // justifyContent=
-            align='end'
-
-            // marginRight='200px'
-            // px={useBreakpointValue({ base: 4, md: 8 })}
-            // bgGradient={'linear(to-r, blackAlpha.600, transparent)'}
-            >
-             
-
-            {/* <Box margin='auto' marginLeft='800px'  border="1px solid red" > */}
-           
-            <Stack  align='center' maxW={'2xl'} spacing={6}>
-                   
-            <Text fontFamily='helvetica' className={styles.textStyle}>
-                    
-                      Hi I am Mohamed Haris
-            </Text>
-              <Text
-              
-                className={styles.variant}
-                color={ colorMode==='dark'? 'dark' : 'white'}
-                fontWeight={700}
-                lineHeight={1.2}
-                // fontSize={useBreakpointValue({ base: '3xl', md: '4xl' })}
-                >
-                Aspiring Full-Stack Web Developer 
-              </Text>
-              
-              <Stack direction={'row'}  >
-                <Box   >
-                {/* <Link 
-                // border='1px red solid'
-                boxShadow='inner'
-                className={styles.link}
-               
-                href='https://drive.google.com/file/d/1qMnwNd1uqkUwpb5eHR76eVI8HpTfsuMM/view?usp=sharing'
-                target='_blank'
-                textDecoration={'none'}
-                >
-                  <span>RESUME</span> */}
-          
-                  {/* <Button
-                    bg={'blue.400'}
-                    rounded={'full'}
-                    color={'white'}
-                    cursor='pointer'
-                    _hover={{ bg: 'blue.500' }}>
-                    Show me more
-                  </Button> */}
-                
-                  {/* <div  className={styles.wave}></div> */}
-
-                {/* </Link> */}
-                <Link href='https://www.linkedin.com/in/mohamed-haris'  target='_blank'>
-                <Button
-                 background='linear-gradient(to right, #33ccff 0%, #ff99cc 100%)' 
-                  
-                >RESUME</Button>
-                </Link>
-                
-                </Box>
-
-              </Stack>
-
-              <Stack  maxW={'2xl'} spacing={10}  align='center'>
-                <Box>
-                  <Button
-                  transition='all 2s'
-                   variant={'outine'} 
-                   fontSize='30px' 
-                   color='#C1C8E4'                
-                   heigth="10px"
-                  _hover={{
-                    color:"black",
-                    background:'linear-gradient(to right, #33ccff 0%, #ff99cc 100%)'
-                  }}
-                   >
-                    <Link href='https://github.com/mdharis107'  target='_blank'>
-                  <BsGithub   />
-                    
-                    </Link>
-          
-                  </Button>
-                  <Button
-                  transition='all 2s'
-                   variant={'outine'} 
-                   fontSize='30px' 
-                   color='#C1C8E4'                
-                   heigth="10px"
-                  _hover={{
-                    color:"black",
-                    background:'linear-gradient(to right, #33ccff 0%, #ff99cc 100%)'
-                  }}
-                   >
-                    <Link href='https://www.linkedin.com/in/mohamed-haris' target='_blank'>
-                  <BsLinkedin   />
-                    
-                    </Link>
-          
-                  </Button>
-
-                </Box>
-                
-              
-            </Stack>
-
-            </Stack  >
-                
-           
-
-            {/* </Box> */}
-          </VStack>
-
+  export default function About({colorMode, aboutRef}) {
+    return (
+      <Stack ref={aboutRef} paddingTop={'15px'} display={"flex"} gap={0}  backgroundImage={ 
+       colorMode==="light" ? 'linear-gradient(to bottom, #303136, #393f54, #414d75, #485c96, #4e6bb9, #5470c7, #5b75d6, #6479e4, #6e73e0, #776ddb, #8067d6, #8860d0);-gradient(circle, #c1c8e4, #afbae6, #9dade7, #8a9fe8, #7592e9, #6f8ae8, #6981e6, #6479e4, #6e73e0, #776ddb, #8067d6, #8860d0)' :
+     'linear-gradient(to right, #25274d, #2b2d52, #313356, #383a5b, #3e4060, #404565, #414a6b, #434f70, #3f5477, #3a597e, #335f84, #29648a)'
+      }
+      backgroundSize={'cover'}
+      backgroundPosition={'center center'} w={'full'} minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
+         <Flex flex={1} justify='center' align={'center'}>
+          <Image 
+            alt={'Login Image'}
+            boxSize='350px'
+            borderRadius='full'
+            objectFit={'cover'}
+            src={
+              'https://user-images.githubusercontent.com/104049398/190843442-025788f2-ef6d-417f-b728-6222df2505f8.JPG'
+            }
+          />
         </Flex>
+        <Flex p={8} flex={1} align={'center'} justify={'center'}
+       
+          >
+          <Stack spacing={6} w={'full'} maxW={'lg'}>
+            <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
+              <Box justifyContent={'center'} gap={2} display={'flex'} >
+              <Text
+              color={colorMode==="light" ?   "black" : "white" }
+                as={'span'}
+                // position={'absolute'}
+                _after={{
+                  content: "''",
+                  width: 'full',
+                  height: useBreakpointValue({ base: '20%', md: '30%' }),
+                  position: 'absolute',
+                  bottom: 1,
+                  left: 0,
+                  bg: 'blue.400',
 
-      </Center>
-      
+                  zIndex: -1,
+                }}>
+                About 
+              </Text>
+              <br />{' '}
+              <Text color={'blue.400'} as={'span'}>
+              Me
+              </Text>{' '}
+              </Box>
+            </Heading>
+            <Text  className={colorMode==="light"? styles.aboutme_light : styles.aboutme_dark} >
+                    Aspiring Full-Stack Developer,
+                    Skilled in both front-end and back-end web development.
+                    I have worked on several different projects collaboratively and solely. 
+                    I am a self-driven and passionate web developer skilled in JavaScript, React, and Redux and familiar with front-end frameworks. 
+                    Also, worked on NodeJs, Express, MongoDB DataBase. 
+                    Always eager to learn new technologies to enhance my skills and bring value to the organization.
+            </Text>
+            {/* <Stack direction={{ base: 'column', md: 'row' }} spacing={4}> */}
+              {/* <Button 
+              
+                rounded={'full'}
+                bg={'blue.400'}
+                color={'white'}
+                _hover={{
+                  bg: 'blue.500',
+                }}>
+                Create Project
+              </Button> */}
+              {/* <Button rounded={'full'}>How It Works</Button> */}
+            {/* </Stack> */}
+          </Stack>
+        </Flex>
+       
+      </Stack>
     );
   }
-
-
