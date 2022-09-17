@@ -33,7 +33,7 @@ import { MoonIcon, SunIcon,HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 //   </Link>
 // );
 
-export default function Navbar({homeRef,aboutRef,skillsRef,colorMode,toggleColorMode}) {
+export default function Navbar({homeRef,aboutRef,skillsRef,colorMode,toggleColorMode,projectRef}) {
   // const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -79,9 +79,21 @@ export default function Navbar({homeRef,aboutRef,skillsRef,colorMode,toggleColor
                 )
                   }}>About</Box>
               <Box  _hover={{ cursor: 'pointer', borderBottom: '2px solid #6889FF' }} 
-              >Skills</Box>
+              onClick={() => {
+                skillsRef.current.scrollIntoView(
+                    {
+                        behavior: "smooth",
+                    }
+                )
+                  }}>Skills</Box>
               <Box  _hover={{ cursor: 'pointer', borderBottom: '2px solid #6889FF' }}
-               >Projects</Box>
+                onClick={() => {
+                  projectRef.current.scrollIntoView(
+                      {
+                          behavior: "smooth",
+                      }
+                  )
+                    }}>Projects</Box>
               <Box  _hover={{ cursor: 'pointer', borderBottom: '2px solid #6889FF' }}
               >Contact</Box>
             </HStack>
@@ -118,11 +130,9 @@ export default function Navbar({homeRef,aboutRef,skillsRef,colorMode,toggleColor
           </Flex>
         </Flex>
         {isOpen ? (
+          <Center>
           <Box pb={4} display={{ md: 'none' }} >
             <Stack as={'nav'} spacing={4}>
-              {/* {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
-              ))} */}
                <Box _hover={{ cursor: 'pointer', borderBottom: '2px solid #6889FF' }}
               onClick={() => {
                 homeRef.current.scrollIntoView(
@@ -133,17 +143,32 @@ export default function Navbar({homeRef,aboutRef,skillsRef,colorMode,toggleColor
                   }}>Home</Box>
               <Box _hover={{ cursor: 'pointer', borderBottom: '2px solid #6889FF' }}
               onClick={() => {
-                skillsRef.current.scrollIntoView(
+                aboutRef.current.scrollIntoView(
                     {
                         behavior: "smooth",
                     }
                 )
                   }}>About</Box>
-              <Box>Skills</Box>
-              <Box>Projects</Box>
+              <Box  _hover={{ cursor: 'pointer', borderBottom: '2px solid #6889FF' }} 
+              onClick={() => {
+                skillsRef.current.scrollIntoView(
+                    {
+                        behavior: "smooth",
+                    }
+                )
+                  }}>Skills</Box>
+              <Box  _hover={{ cursor: 'pointer', borderBottom: '2px solid #6889FF' }} 
+              onClick={() => {
+                projectRef.current.scrollIntoView(
+                    {
+                        behavior: "smooth",
+                    }
+                )
+                  }}>Projects</Box>
               <Box>Contact</Box>
             </Stack>
           </Box>
+          </Center>
         ) : null}
       </Box>
     </>

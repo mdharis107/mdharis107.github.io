@@ -64,7 +64,7 @@ import {
               <Stack direction={'row'}  >
                 <Box   >
                
-                <Link    textDecoration={'none'} href='https://drive.google.com/file/d/1qMnwNd1uqkUwpb5eHR76eVI8HpTfsuMM/view?usp=sharing'  target='_blank' transition='all 2s'>
+                <Link    _hover={{textDecoration:"none"}} href='https://drive.google.com/file/d/1qMnwNd1uqkUwpb5eHR76eVI8HpTfsuMM/view?usp=sharing'  target='_blank' transition='all 2s'>
                 <Button
                   textDecoration='none'
                   _hover={{

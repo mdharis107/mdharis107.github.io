@@ -160,7 +160,7 @@ export default function Skills({colorMode,skillsRef}) {
   // ]
   return (
     
-    <Box  mt={0} p={20} backgroundImage={ 
+    <Box ref={skillsRef}  mt={0} p={20} backgroundImage={ 
       colorMode==="light" ? 'linear-gradient(to top, #303136, #393f54, #414d75, #485c96, #4e6bb9, #5470c7, #5b75d6, #6479e4, #6e73e0, #776ddb, #8067d6, #8860d0);-gradient(circle, #c1c8e4, #afbae6, #9dade7, #8a9fe8, #7592e9, #6f8ae8, #6981e6, #6479e4, #6e73e0, #776ddb, #8067d6, #8860d0)' :
     'linear-gradient(to right, #25274d, #2b2d52, #313356, #383a5b, #3e4060, #404565, #414a6b, #434f70, #3f5477, #3a597e, #335f84, #29648a)'
      }
@@ -190,7 +190,7 @@ export default function Skills({colorMode,skillsRef}) {
         {/* </GridItem> */}
        
       {/* </Grid> */}
-      <Divider mt={12} mb={12} />
+      <Divider  mt={12} mb={12}  />
       {/* <Center marginBottom={'10'}>
             <Heading alignContent='center'  >
             Front End
@@ -215,7 +215,7 @@ export default function Skills({colorMode,skillsRef}) {
               // transition='all 2s'
               variant={'outine'}
                    boxSize={'150px'} 
-                   color='#C1C8E4'
+                   color='#F2F2F2'
                   _hover={{
                     color:"black",
                     background:'linear-gradient(to right, #33ccff 0%, #ff99cc 100%)'

@@ -5,6 +5,7 @@ import {
     Flex,
     Heading,
     Image,
+    keyframes,
     Stack,
     Text,
     useBreakpointValue,
@@ -12,6 +13,7 @@ import {
   import styles from "./About.module.css"
   
   export default function About({colorMode, aboutRef}) {
+   
     return (
       <Stack ref={aboutRef} paddingTop={'15px'} display={"flex"} gap={0}  backgroundImage={ 
        colorMode==="light" ? 'linear-gradient(to bottom, #303136, #393f54, #414d75, #485c96, #4e6bb9, #5470c7, #5b75d6, #6479e4, #6e73e0, #776ddb, #8067d6, #8860d0);-gradient(circle, #c1c8e4, #afbae6, #9dade7, #8a9fe8, #7592e9, #6f8ae8, #6981e6, #6479e4, #6e73e0, #776ddb, #8067d6, #8860d0)' :
@@ -20,6 +22,8 @@ import {
       backgroundSize={'cover'}
       backgroundPosition={'center center'} w={'full'} minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
          <Flex flex={1} justify='center' align={'center'}>
+         
+        
           <Image 
             alt={'Login Image'}
             boxSize='350px'
@@ -29,6 +33,9 @@ import {
               'https://user-images.githubusercontent.com/104049398/190843442-025788f2-ef6d-417f-b728-6222df2505f8.JPG'
             }
           />
+
+      
+        
         </Flex>
         <Flex p={8} flex={1} align={'center'} justify={'center'}
        
