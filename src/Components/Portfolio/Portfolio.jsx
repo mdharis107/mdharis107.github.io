@@ -25,8 +25,7 @@ function Portfolio() {
             <About aboutRef={aboutRef} colorMode={colorMode}   />
             <Skills skillsRef={skillsRef} colorMode={colorMode}/>
             <Projects projectRef={projectRef} colorMode={colorMode}/>
-
-            <Contact/>
+            <Contact projectRef={projectRef} colorMode={colorMode}/>
             
         </div>
     );

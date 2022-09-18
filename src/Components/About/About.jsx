@@ -15,7 +15,7 @@ import {
   export default function About({colorMode, aboutRef}) {
    
     return (
-      <Stack ref={aboutRef} paddingTop={'15px'} display={"flex"} gap={0}  
+      <Stack transitionDelay={'4s'} ref={aboutRef} paddingTop={'15px'} display={"flex"} gap={0}  
       backgroundImage={ 
        colorMode==="light" ? 'linear-gradient(to bottom, #303136, #393f54, #414d75, #485c96, #4e6bb9, #5470c7, #5b75d6, #6479e4, #6e73e0, #776ddb, #8067d6, #8860d0);-gradient(circle, #c1c8e4, #afbae6, #9dade7, #8a9fe8, #7592e9, #6f8ae8, #6981e6, #6479e4, #6e73e0, #776ddb, #8067d6, #8860d0)' :
      'linear-gradient(to right, #25274d, #2b2d52, #313356, #383a5b, #3e4060, #404565, #414a6b, #434f70, #3f5477, #3a597e, #335f84, #29648a)'

@@ -94,7 +94,7 @@ import {
                    fontSize='30px' 
                    color='#C1C8E4'  
                   padding={'0'}
-
+                  // variant="ghost"
                   //  heigth="10px"
                   _hover={{
                     color:"black",
