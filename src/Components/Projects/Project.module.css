@@ -1,0 +1,20 @@
+.btn_dark:hover {
+    /* color:'linear-gradient(to right, #33ccff 0%, #ff99cc 100%)'; */
+    /* background: linear-gradient(to right, #33ccff 0%, #ff99cc 100%); */
+    transition: transform 0.5s ease;
+    transform: scale(1.2);
+    background-color: white;
+    color: black;
+    
+  }
+  .btn_light{
+    /* background: linear-gradient(to left, #33ccff 0%, #ff99cc 100%) */
+  }
+
+  .btn_light:hover{
+   
+    transition: transform 0.5s ease;
+    transform: scale(1.2);
+    background-color: black;
+    color: white;
+  }

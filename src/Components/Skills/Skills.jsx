@@ -160,13 +160,15 @@ export default function Skills({colorMode,skillsRef}) {
   // ]
   return (
     
-    <Box ref={skillsRef}  mt={0} p={20} backgroundImage={ 
+    <Box ref={skillsRef}    backgroundImage={ 
       colorMode==="light" ? 'linear-gradient(to top, #303136, #393f54, #414d75, #485c96, #4e6bb9, #5470c7, #5b75d6, #6479e4, #6e73e0, #776ddb, #8067d6, #8860d0);-gradient(circle, #c1c8e4, #afbae6, #9dade7, #8a9fe8, #7592e9, #6f8ae8, #6981e6, #6479e4, #6e73e0, #776ddb, #8067d6, #8860d0)' :
     'linear-gradient(to right, #25274d, #2b2d52, #313356, #383a5b, #3e4060, #404565, #414a6b, #434f70, #3f5477, #3a597e, #335f84, #29648a)'
      }
      backgroundSize={'cover'}
      backgroundPosition={'center center'} 
-     w={'full'} minH={'100vh'}>
+     w={'full'} minH={'100vh'} 
+      paddingBottom='20px' paddingTop={'10px'}
+     >
       {/* <Divider mt={12} mb={12} /> */}
       {/* {colorMode==="light"? "": <Divider mt={12} mb={12} /> }  */}
       {/* <Grid
@@ -179,8 +181,8 @@ export default function Skills({colorMode,skillsRef}) {
         {/* <GridItem colSpan={1}> */}
           {/* <VStack alignItems="flex-start" spacing="20px">
             <chakra.h2 fontSize="3xl" fontWeight="700"> */}
-            <Center> 
-            <Heading color= {colorMode==="light" ? '#F7F9FB' : '#5ab9ea'} alignContent='center' width={'100px'} borderBottom={'2px solid #46344E'}>
+            <Center > 
+            <Heading mt={12} mb={6} color= {colorMode==="light" ? '#F7F9FB' : '#5ab9ea'} alignContent='center' width={'100px'} borderBottom={'2px solid #46344E'}>
             Skills
             </Heading>
             </Center>

@@ -40,9 +40,11 @@ export default function Navbar({homeRef,aboutRef,skillsRef,colorMode,toggleColor
 
   return (
     <>
+    {/* bg={useColorModeValue('linear-gradient(to left, #c1c8e4, #b8c9e8, #aec9ea, #a3cbec, #96cced, #8dcbed, #83caec, #79c9eb, #71c5eb, #69c1ea, #62bdea, #5ab9ea)', 'linear-gradient(to right, #25274d, #2b2d52, #313356, #383a5b, #3e4060, #404565, #414a6b, #434f70, #3f5477, #3a597e, #335f84, #29648a);')} */}
     {/* background-image: linear-gradient(to right, #c1c8e4, #b8c9e8, #aec9ea, #a3cbec, #96cced, #8dcbed, #83caec, #79c9eb, #71c5eb, #69c1ea, #62bdea, #5ab9ea); */}
     {/* radial-gradient(circle, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1) */}
-      <Box w={'100%'} position='sticky' top={0} zIndex={999}  bg={useColorModeValue('linear-gradient(to left, #c1c8e4, #b8c9e8, #aec9ea, #a3cbec, #96cced, #8dcbed, #83caec, #79c9eb, #71c5eb, #69c1ea, #62bdea, #5ab9ea)', 'linear-gradient(to right, #25274d, #2b2d52, #313356, #383a5b, #3e4060, #404565, #414a6b, #434f70, #3f5477, #3a597e, #335f84, #29648a);')} px={4}>
+    
+      <Box w={'100%'} bg={useColorModeValue('linear-gradient(to left, #c1c8e4, #b8c9e8, #aec9ea, #a3cbec, #96cced, #8dcbed, #83caec, #79c9eb, #71c5eb, #69c1ea, #62bdea, #5ab9ea)', 'linear-gradient(to right, #25274d, #2b2d52, #313356, #383a5b, #3e4060, #404565, #414a6b, #434f70, #3f5477, #3a597e, #335f84, #29648a);')} position='sticky' top={0} zIndex={999}   px={4}>
         <Flex   h={16} alignItems={'center'} justifyContent={'space-between'}>
         <IconButton
 
@@ -116,22 +118,17 @@ export default function Navbar({homeRef,aboutRef,skillsRef,colorMode,toggleColor
                 <Avatar
                 boxSize='40px'
                   size={'sm'}
-                  src='https://user-images.githubusercontent.com/104049398/190843442-025788f2-ef6d-417f-b728-6222df2505f8.JPG'
+                  src='https://user-images.githubusercontent.com/104049398/190892445-81a811ba-f28b-4217-a30d-a27a91ca95f1.png'
                 />
               </Box>
-              {/* <MenuList>
-                <MenuItem>Link 1</MenuItem>
-                <MenuItem>Link 2</MenuItem>
-                <MenuDivider />
-                <MenuItem>Link 3</MenuItem>
-              </MenuList> */}
+             
             </Menu>
             </Stack>
           </Flex>
         </Flex>
         {isOpen ? (
           <Center>
-          <Box pb={4} display={{ md: 'none' }} >
+          <Box w={'100%'} pb={4} display={{ md: 'none' }} >
             <Stack as={'nav'} spacing={4}>
                <Box _hover={{ cursor: 'pointer', borderBottom: '2px solid #6889FF' }}
               onClick={() => {

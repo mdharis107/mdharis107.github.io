@@ -7,7 +7,7 @@ import Navbar from '../Navbar/Navbar';
 import Projects from '../Projects/Projects';
 import Skills from '../Skills/Skills';
 import About from '../About/About';
-import ProjectCard from '../Projects/ProjectsCard';
+
 
 function Portfolio() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -25,7 +25,7 @@ function Portfolio() {
             <About aboutRef={aboutRef} colorMode={colorMode}   />
             <Skills skillsRef={skillsRef} colorMode={colorMode}/>
             <Projects projectRef={projectRef} colorMode={colorMode}/>
-            {/* <ProjectCard/> */}
+
             <Contact/>
             
         </div>
