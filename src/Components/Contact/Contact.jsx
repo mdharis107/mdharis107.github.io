@@ -18,6 +18,8 @@ import {
   InputGroup,
   InputLeftElement,
   Textarea,
+  Alert,
+  AlertIcon,
 } from '@chakra-ui/react';
 import {
   MdPhone,
@@ -28,6 +30,14 @@ import {
 } from 'react-icons/md';
 import { BsGithub,BsLinkedin, BsDiscord, BsPerson } from 'react-icons/bs';
 import { EmailIcon } from '@chakra-ui/icons';
+import emailjs from '@emailjs/browser';
+
+function Alerting(){
+  <Alert status='success'>
+  <AlertIcon />
+  There was an error processing your request
+</Alert>
+}
 
 export default function Contact({colorMode, contactRef}) {
 
@@ -35,14 +45,17 @@ export default function Contact({colorMode, contactRef}) {
 
   const sendEmail =(e)=>{
     e.preventDefault()
-    // emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
-    //   .then((result) => {
-    //       console.log(result.text);
-    //   }, (error) => {
-    //       console.log(error.text);
-    //   });
+    emailjs.sendForm('service_csxvaan', 'template_syzvtf6', form.current, 'EeyZQXDhvxaep2cZO')
+      .then((result) => {
+          console.log(result.text);
+         
+      }, (error) => {
+          console.log(error.text);
+      });
+      e.target.reset()
+      // Alerting()
+      alert('Mail sent')
   }
-
   
 
   return (
@@ -159,7 +172,7 @@ export default function Contact({colorMode, contactRef}) {
               <WrapItem>
                 <Box bg={colorMode==="light"? "white" : "#424656"} borderRadius="lg">
                   <Box m={8} color={colorMode==="light"?"#0B0E3F": "white"}>
-                    <form action="" ref={form} onSubmit={sendEmail} >
+                    <form  ref={form} onSubmit={sendEmail} >
                     <VStack spacing={5}>
                       <FormControl id="name">
                         <FormLabel>Your Name</FormLabel>
@@ -168,7 +181,7 @@ export default function Contact({colorMode, contactRef}) {
                             pointerEvents="none"
                             children={<BsPerson color="gray.800" />}
                           />
-                          <Input type="text" size="md" />
+                          <Input type="text" name="user_name" size="md" />
                         </InputGroup>
                       </FormControl>
                       <FormControl id="name">
@@ -178,12 +191,13 @@ export default function Contact({colorMode, contactRef}) {
                             pointerEvents="none"
                             children={<MdOutlineEmail color="gray.800" />}
                           />
-                          <Input type="text" size="md" />
+                          <Input type="email" name="user_email" size="md" />
                         </InputGroup>
                       </FormControl>
                       <FormControl id="name">
                         <FormLabel>Message</FormLabel>
                         <Textarea
+                        name="message"
                           borderColor="gray.300"
                           _hover={{
                             borderRadius: 'gray.300',
@@ -193,6 +207,7 @@ export default function Contact({colorMode, contactRef}) {
                       </FormControl>
                       <FormControl id="name" float="right">
                         <Button
+                         type="submit" value="Send"
                           variant="solid"
                           bg="#0D74FF"
                           color="white"
@@ -218,3 +233,5 @@ export default function Contact({colorMode, contactRef}) {
     </Container>
   );
 }
+
+

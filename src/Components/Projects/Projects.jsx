@@ -8,6 +8,8 @@ import {
   FaBootstrap,
 } from "react-icons/fa";
 
+
+
 import React from 'react';
 
 import {
@@ -19,8 +21,10 @@ import {
   useColorModeValue,
   Button,
   Image,
-  Divider
+  Divider,
+  Center
 } from '@chakra-ui/react';
+
 
 function PriceWrapper({ children }) {
 
@@ -88,6 +92,7 @@ function PriceWrapper({ children }) {
     <Box
     
       mb={4}
+      
       shadow="base"
       borderWidth="1px"
       alignSelf={{ base: 'center', lg: 'flex-start' }}
@@ -425,6 +430,11 @@ export default function Project({colorMode,projectRef}) {
         </PriceWrapper>
 
       </Stack>
+      {/* <Center>
+      <Box width={'60%'}  >
+    
+      </Box>
+      </Center> */}
     </Box>
   );
 }

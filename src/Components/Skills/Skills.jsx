@@ -42,6 +42,7 @@ import {
 import {
   BsGithub
 } from "react-icons/bs";
+import GitHubCalendar from "react-github-calendar"
 
 
 export default function Skills({colorMode,skillsRef}) {
@@ -167,7 +168,7 @@ export default function Skills({colorMode,skillsRef}) {
      backgroundSize={'cover'}
      backgroundPosition={'center center'} 
      w={'full'} minH={'100vh'} 
-      paddingBottom='20px' paddingTop={'10px'}
+      paddingBottom='1px' paddingTop={'10px'}
      >
       {/* <Divider mt={12} mb={12} /> */}
       {/* {colorMode==="light"? "": <Divider mt={12} mb={12} /> }  */}
@@ -239,6 +240,13 @@ export default function Skills({colorMode,skillsRef}) {
         
       </Grid>
       
+      
+      <Box margin={'auto'} marginTop={'30px'} width={'60%'}  >
+      <Center>
+      <GitHubCalendar color={colorMode==="light"? "black" : ""}  username="mdharis107" />
+      </Center>
+      </Box>
+ 
     </Box>
   );
 }
