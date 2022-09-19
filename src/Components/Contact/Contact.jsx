@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import styles from "./Contactme.module.css"
 import {
   Container,
@@ -26,12 +26,28 @@ import {
   MdFacebook,
   MdOutlineEmail,
 } from 'react-icons/md';
-import { BsGithub, BsDiscord, BsPerson } from 'react-icons/bs';
+import { BsGithub,BsLinkedin, BsDiscord, BsPerson } from 'react-icons/bs';
+import { EmailIcon } from '@chakra-ui/icons';
 
 export default function Contact({colorMode, contactRef}) {
+
+  const form = useRef();
+
+  const sendEmail =(e)=>{
+    e.preventDefault()
+    // emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+    //   .then((result) => {
+    //       console.log(result.text);
+    //   }, (error) => {
+    //       console.log(error.text);
+    //   });
+  }
+
+  
+
   return (
     // https://images.unsplash.com/photo-1653289755854-a41949e96282?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80
-    <Container paddingTop={'20px'} w={'full'}
+    <Container ref={contactRef} paddingTop={'20px'} w={'full'}
     h={'full'}
     background='fixed'
     backgroundImage={ colorMode==="light"?
@@ -90,24 +106,32 @@ export default function Contact({colorMode, contactRef}) {
                       </Button>
                     </VStack>
                   </Box>
+                
                   <HStack
+                  
                     mt={{ lg: 10, md: 10 }}
                     spacing={5}
                     px={5}
                     alignItems="flex-start">
+                    
                     <IconButton
+                    as={'a'}
+                    href="https://www.facebook.com/mohamed.haris.92351"
+                    target={'_blank'}
+                    // transition='all 1s'
                       aria-label="facebook"
-                      transition='all 1s'
                       variant="ghost"
                       size="lg"
-                      // fontSize={'30px'}
-                      // isRound={true}
+                      isRound={true}
                       _hover={{ bg: '#0D74FF' }}
                       icon={<MdFacebook size="30px" />}
                     />
+                   
                     <IconButton
                     as={'a'}
-                    href="#"
+                    href="https://github.com/mdharis107"
+                    target={'_blank'}
+                    // transition='all 0.5s'
                       aria-label="github"
                       variant="ghost"
                       size="lg"
@@ -115,20 +139,27 @@ export default function Contact({colorMode, contactRef}) {
                       _hover={{ bg: '#0D74FF' }}
                       icon={<BsGithub size="28px" />}
                     />
-                    <IconButton
-                      aria-label="discord"
+                   
+                   <IconButton
+                   as={'a'}
+                   href='https://www.linkedin.com/in/mohamed-haris'
+                   target={'_blank'}
+                      aria-label="linkdin"
                       variant="ghost"
                       size="lg"
                       isRound={true}
                       _hover={{ bg: '#0D74FF' }}
-                      icon={<BsDiscord size="28px" />}
+                      icon={<BsLinkedin size="28px" />}
                     />
                   </HStack>
+                
                 </Box>
               </WrapItem>
+             
               <WrapItem>
-                <Box bg="white" borderRadius="lg">
-                  <Box m={8} color="#0B0E3F">
+                <Box bg={colorMode==="light"? "white" : "#424656"} borderRadius="lg">
+                  <Box m={8} color={colorMode==="light"?"#0B0E3F": "white"}>
+                    <form action="" ref={form} onSubmit={sendEmail} >
                     <VStack spacing={5}>
                       <FormControl id="name">
                         <FormLabel>Your Name</FormLabel>
@@ -165,11 +196,18 @@ export default function Contact({colorMode, contactRef}) {
                           variant="solid"
                           bg="#0D74FF"
                           color="white"
-                          _hover={{}}>
+                          transition="0.3s ease-in-out"
+                          _hover={{
+                            transform: 'scale(1.10)', 
+                            bg:"black",
+                          color:"#0D74FF"     
+                          }}
+                          >
                           Send Message
                         </Button>
                       </FormControl>
                     </VStack>
+                    </form>
                   </Box>
                 </Box>
               </WrapItem>

@@ -33,7 +33,7 @@ import { MoonIcon, SunIcon,HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 //   </Link>
 // );
 
-export default function Navbar({homeRef,aboutRef,skillsRef,colorMode,toggleColorMode,projectRef}) {
+export default function Navbar({homeRef,aboutRef,skillsRef,colorMode,toggleColorMode,projectRef,contactRef}) {
   // const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -97,7 +97,13 @@ export default function Navbar({homeRef,aboutRef,skillsRef,colorMode,toggleColor
                   )
                     }}>Projects</Box>
               <Box  _hover={{ cursor: 'pointer', borderBottom: '2px solid #6889FF' }}
-              >Contact</Box>
+               onClick={() => {
+                contactRef.current.scrollIntoView(
+                    {
+                        behavior: "smooth",
+                    }
+                )
+                  }}>Contact</Box>
             </HStack>
           </HStack>
 
@@ -162,7 +168,14 @@ export default function Navbar({homeRef,aboutRef,skillsRef,colorMode,toggleColor
                     }
                 )
                   }}>Projects</Box>
-              <Box>Contact</Box>
+              <Box _hover={{ cursor: 'pointer', borderBottom: '2px solid #6889FF' }} 
+              onClick={() => {
+                contactRef.current.scrollIntoView(
+                    {
+                        behavior: "smooth",
+                    }
+                )
+                  }}>Contact</Box>
             </Stack>
           </Box>
           </Center>

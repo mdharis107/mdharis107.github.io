@@ -20,12 +20,12 @@ function Portfolio() {
 
     return (
         <div>
-            <Navbar aboutRef={aboutRef} colorMode={colorMode} toggleColorMode={toggleColorMode} homeRef={homeRef} skillsRef={skillsRef} projectRef={projectRef}/>
+            <Navbar aboutRef={aboutRef} colorMode={colorMode} toggleColorMode={toggleColorMode} homeRef={homeRef} skillsRef={skillsRef} projectRef={projectRef} contactRef={contactRef}/>
             <Home colorMode={colorMode}  homeRef={homeRef} />
             <About aboutRef={aboutRef} colorMode={colorMode}   />
             <Skills skillsRef={skillsRef} colorMode={colorMode}/>
             <Projects projectRef={projectRef} colorMode={colorMode}/>
-            <Contact projectRef={projectRef} colorMode={colorMode}/>
+            <Contact contactRef={contactRef} colorMode={colorMode} />
             
         </div>
     );

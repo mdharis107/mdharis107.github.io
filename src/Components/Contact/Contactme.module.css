@@ -1,10 +1,17 @@
 .icon_dark{
     color:'red'; 
-
 }
 
 .icon_dark:hover{
         color:"white";
         background-color:'linear-gradient(to right, #33ccff 0%, #ff99cc 100%)';
       
+}
+
+.turn_light{
+    border: 1px red solid;
+}
+.turn_light:hover{
+    /* background: blue; */
+    border: 1px green solid;
 }
