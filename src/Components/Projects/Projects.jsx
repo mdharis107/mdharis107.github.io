@@ -22,7 +22,6 @@ import {
   Button,
   Image,
   Divider,
-  Center
 } from '@chakra-ui/react';
 
 

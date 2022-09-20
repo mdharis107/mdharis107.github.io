@@ -8,7 +8,6 @@ import {
   useDisclosure,
   useColorModeValue,
   Stack,
-  useColorMode,
   Center,
   HStack,
   IconButton
@@ -16,25 +15,8 @@ import {
 import { MoonIcon, SunIcon,HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
 
-
-// const Links = ["Home","About",'Skills', 'Projects', 'Contact'];
-
-// const NavLink = ({ children }) => (
-//   <Link
-//     px={2}
-//     py={1}
-//     rounded={'md'}
-//     _hover={{
-//       textDecoration: 'none',
-//       bg: useColorModeValue('gray.200', 'gray.700'),
-//     }}
-//     href={''}>
-//     {children}
-//   </Link>
-// );
-
 export default function Navbar({homeRef,aboutRef,skillsRef,colorMode,toggleColorMode,projectRef,contactRef}) {
-  // const { colorMode, toggleColorMode } = useColorMode();
+  
   const { isOpen, onOpen, onClose } = useDisclosure();
 
 

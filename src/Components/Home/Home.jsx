@@ -5,7 +5,6 @@ import {
     Text,
     Box,
     VStack,
-    useBreakpointValue,
     Center,
     Link,
     // useMediaQuery,
@@ -19,6 +18,21 @@ import {
     // const [isLargerThan900] = useMediaQuery('(min-width: 900px)');
 
     // const Letters = ['Hi I am Mohamed Haris']
+
+    const handleDownload = () =>{
+       // using Java Script method to get PDF file
+    fetch("MohamedHaris.pdf").then((response) => {
+      response.blob().then((blob) => {
+        // Creating new object of PDF file
+        const fileURL = window.URL.createObjectURL(blob);
+        // Setting various property values
+        let alink = document.createElement("a");
+        alink.href = fileURL;
+        alink.download = "MohamedHaris.pdf";
+        alink.click();
+      });
+    });
+    }
     return (  
       <Center  ref={homeRef}>
         {/* {isLargerThan900 ?  */}
@@ -64,8 +78,9 @@ import {
               <Stack direction={'row'}  >
                 <Box   >
                
-                <Link    _hover={{textDecoration:"none"}} href='https://drive.google.com/file/d/1qMnwNd1uqkUwpb5eHR76eVI8HpTfsuMM/view?usp=sharing'  target='_blank' transition='all 2s'>
+                {/* <Link    _hover={{textDecoration:"none"}} href='https://drive.google.com/file/d/1qMnwNd1uqkUwpb5eHR76eVI8HpTfsuMM/view?usp=sharing'  target='_blank' transition='all 2s'> */}
                 <Button
+                onClick={handleDownload}
                   textDecoration='none'
                   _hover={{
                 transition:'all 5s',
@@ -78,7 +93,7 @@ import {
                 transition='all 5s'
                   
                 >RESUME</Button>
-                </Link>
+                {/* </Link> */}
                 
                 </Box>
 

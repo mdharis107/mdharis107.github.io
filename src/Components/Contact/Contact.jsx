@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import styles from "./Contactme.module.css"
+// import styles from "./Contactme.module.css"
 import {
   Container,
   Flex,
@@ -18,8 +18,7 @@ import {
   InputGroup,
   InputLeftElement,
   Textarea,
-  Alert,
-  AlertIcon,
+ 
 } from '@chakra-ui/react';
 import {
   MdPhone,
@@ -28,16 +27,16 @@ import {
   MdFacebook,
   MdOutlineEmail,
 } from 'react-icons/md';
-import { BsGithub,BsLinkedin, BsDiscord, BsPerson } from 'react-icons/bs';
-import { EmailIcon } from '@chakra-ui/icons';
+import { BsGithub,BsLinkedin, BsPerson } from 'react-icons/bs';
+// import { EmailIcon } from '@chakra-ui/icons';
 import emailjs from '@emailjs/browser';
 
-function Alerting(){
-  <Alert status='success'>
-  <AlertIcon />
-  There was an error processing your request
-</Alert>
-}
+// function Alerting(){
+//   <Alert status='success'>
+//   <AlertIcon />
+//   There was an error processing your request
+// </Alert>
+// }
 
 export default function Contact({colorMode, contactRef}) {
 

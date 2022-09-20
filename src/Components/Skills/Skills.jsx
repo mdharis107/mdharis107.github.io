@@ -4,12 +4,8 @@ import {
   Box,
   VStack,
   Button,
-  Flex,
   Divider,
-  chakra,
   Grid,
-  GridItem,
-  Container,
   Heading,
   Text,
   Stack,
@@ -17,17 +13,10 @@ import {
 } from '@chakra-ui/react';
 import {
   SiChakraui,
-  SiFirebase,
   SiJavascript,
-  SiMaterialui,
-  SiMongodb,
-  SiExpress,
-  SiTypescript,
   SiNodedotjs,
   SiCss3,
   SiRedux,
-  SiLinux,
-  SiNpm,
 } from "react-icons/si";
 import {
   FaGitAlt,
@@ -241,11 +230,12 @@ export default function Skills({colorMode,skillsRef}) {
       </Grid>
       
       
-      <Box margin={'auto'} marginTop={'30px'} width={'60%'}  >
+      <VStack margin={'auto'} gap={8} marginTop={'30px'} width={'60%'}  >
+        <Heading>Git - Stats</Heading>
       <Center>
-      <GitHubCalendar color={colorMode==="light"? "black" : ""}  username="mdharis107" />
+      <GitHubCalendar  username="mdharis107" />
       </Center>
-      </Box>
+      </VStack>
  
     </Box>
   );
