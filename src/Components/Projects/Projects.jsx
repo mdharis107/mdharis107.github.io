@@ -9,7 +9,7 @@ import {
 } from "react-icons/fa";
 
 
-
+import { BsGithub, BsLink45Deg} from 'react-icons/bs'
 import React from 'react';
 
 import {
@@ -22,6 +22,8 @@ import {
   Button,
   Image,
   Divider,
+
+  SimpleGrid,
 } from '@chakra-ui/react';
 
 
@@ -128,6 +130,7 @@ export default function Project({colorMode,projectRef}) {
 
         
       </VStack>
+
       <Divider mt={6} mb={6}  />
       <Stack
       p={10}
@@ -135,17 +138,23 @@ export default function Project({colorMode,projectRef}) {
         textAlign="center"
         justify="center"
         spacing={{ base: 4, lg: 10 }}
-        py={10}>
-
+        py={10}
+        >
+          
+      <SimpleGrid columns={[1, 1, 2, 3]} spacing={4} >
+         
+       
         <PriceWrapper >
           <Box
             maxW={'400px'}
             w={'full'}
+            // width={'100%'}
             bg={useColorModeValue('white', 'gray.900')}
             boxShadow={'2xl'}
             rounded={'md'}
             p={6}
-            overflow={'hidden'}>
+            // overflow={'hidden'}
+            >
             <Box
               // h={'280px'}
               bg={'gray.100'}
@@ -188,16 +197,15 @@ export default function Project({colorMode,projectRef}) {
           <Text fontWeight={800} fontSize={'xl'}>
           Tech stack
           </Text>
-                <Box marginTop={'2'}  display={"flex"} gap={'8'}>
+                <Box  marginTop={'2'}  display={"flex"} gap={'5'}>
                     
-                    <Box>
+                  
                       <Button
                       boxSize={'50px'}
                           fontSize={'20px'}
                           color={'red'}>
                       <FaHtml5 />
                     </Button>
-                      </Box>
                       
                       <Button
                       color="green"
@@ -205,6 +213,7 @@ export default function Project({colorMode,projectRef}) {
                         boxSize={"50px"} >
                           <FaCss3Alt />
                       </Button>
+                     
                       <Button
                       color="yellow.400"
                     
@@ -212,6 +221,7 @@ export default function Project({colorMode,projectRef}) {
                         boxSize={"50px"} >
                           <SiJavascript />
                         </Button>
+                     
                       <Button 
                       ransition='all 2s'
                       fontSize={'20px'}
@@ -231,17 +241,18 @@ export default function Project({colorMode,projectRef}) {
 
         <Box gap={8} display={'flex'}>
           <Box  >
-                <Button className={colorMode==="light"? styles.btn_light : styles.btn_dark} as={'a'} href="https://candid-starship-25c3ab.netlify.app/" _hover={{textDecoration:"none" }} target='_blank' w={'100px'} >LIVE</Button>
+                <Button className={colorMode==="light"? styles.btn_light : styles.btn_dark} as={'a'} href="https://candid-starship-25c3ab.netlify.app/" _hover={{textDecoration:"none" }} target='_blank' w={'100px'} >LIVE<span style={{ marginLeft:"10px" }}><BsLink45Deg /></span></Button>
           </Box>
           
           <Box>
-          <Button className={colorMode==="light"? styles.btn_light : styles.btn_dark} as={'a'} href="https://github.com/arulxavierax/Project-U2-YOOX" _hover={{textDecoration:"none" }} target='_blank'  w={'100px'}>GITHUB</Button>    
+          <Button className={colorMode==="light"? styles.btn_light : styles.btn_dark} as={'a'} href="https://github.com/arulxavierax/Project-U2-YOOX" _hover={{textDecoration:"none" }} target='_blank'  w={'100px'}> GITHUB <span style={{ marginLeft:"10px" }}><BsGithub/></span></Button>    
           </Box>
         </Box>
 
       </Stack>
           </Box>
         </PriceWrapper>
+       
 
         <PriceWrapper>
           <Box
@@ -324,12 +335,12 @@ export default function Project({colorMode,projectRef}) {
 
         <Box gap={8} display={'flex'}>
           <Box>
-                <Button className={colorMode==="light"? styles.btn_light : styles.btn_dark} as={'a'} href="https://jazzy-cocada-65d352.netlify.app/" _hover={{textDecoration:"none" }} target='_blank' w={'100px'} >LIVE</Button>
+                <Button className={colorMode==="light"? styles.btn_light : styles.btn_dark} as={'a'} href="https://jazzy-cocada-65d352.netlify.app/" _hover={{textDecoration:"none" }} target='_blank' w={'100px'} >LIVE<span style={{ marginLeft:"10px" }}><BsLink45Deg /></span>  </Button>
           </Box>
           
           <Box>
           <Button className={colorMode==="light"? styles.btn_light : styles.btn_dark} as={'a'} href="https://github.com/11-DEEPAK-KUMAR-11/Bewakoof_website
-  " _hover={{textDecoration:"none" }} target='_blank'  w={'100px'}>GITHUB</Button>    
+  " _hover={{textDecoration:"none" }} target='_blank'  w={'100px'}>  GITHUB <span style={{ marginLeft:"10px" }}><BsGithub/></span> </Button>    
           </Box>
         </Box>
 
@@ -341,6 +352,7 @@ export default function Project({colorMode,projectRef}) {
         <Box
           maxW={'400px'}
           w={'full'}
+          // width={'auto'}
           bg={useColorModeValue('white', 'gray.900')}
           boxShadow={'2xl'}
           rounded={'md'}
@@ -416,11 +428,11 @@ export default function Project({colorMode,projectRef}) {
 
       <Box gap={8} display={'flex'}>
         <Box>
-              <Button className={colorMode==="light"? styles.btn_light : styles.btn_dark} as={'a'} href="https://toggl-track-by-gas-face-3608.netlify.app/" _hover={{textDecoration:"none" }} target='_blank' w={'100px'} >LIVE</Button>
+              <Button className={colorMode==="light"? styles.btn_light : styles.btn_dark} as={'a'} href="https://toggl-track-by-gas-face-3608.netlify.app/" _hover={{textDecoration:"none" }} target='_blank' w={'100px'} >LIVE<span style={{ marginLeft:"10px" }}><BsLink45Deg /></span></Button>
         </Box>
         
         <Box>
-        <Button className={colorMode==="light"? styles.btn_light : styles.btn_dark} as={'a'} href="https://github.com/abhijitnr/-gas-face-3608" _hover={{textDecoration:"none" }} target='_blank'  w={'100px'}>GITHUB</Button>    
+        <Button className={colorMode==="light"? styles.btn_light : styles.btn_dark} as={'a'} href="https://github.com/abhijitnr/-gas-face-3608" _hover={{textDecoration:"none" }} target='_blank'  w={'100px'}> GITHUB <span style={{ marginLeft:"10px" }}><BsGithub/></span></Button>    
         </Box>
       </Box>
 
@@ -428,7 +440,10 @@ export default function Project({colorMode,projectRef}) {
         </Box>
         </PriceWrapper>
 
+        </SimpleGrid>
+  
       </Stack>
+
       {/* <Center>
       <Box width={'60%'}  >
     

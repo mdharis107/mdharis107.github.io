@@ -192,13 +192,14 @@ export default function Skills({colorMode,skillsRef}) {
       w={'100%'}
       margin='auto'
       justifyItems={'center'}
-     
+      
         templateColumns={{
-          base: 'repeat(1, 1fr)',
-          sm: 'repeat(2, 1fr)',
+          base: 'repeat(2, 1fr)',
+          sm: 'repeat(3, 1fr)',
           md: 'repeat(4, 1fr)',
         }}
-        gap={{ base: '8', sm: '12', md: '16' }}>
+        gap={{ base: '1', sm: '2', md: '8' }}
+        rowGap='10'>
 
 {FrontEnd.map((t) => {
           return (
@@ -231,9 +232,9 @@ export default function Skills({colorMode,skillsRef}) {
       
       
       <VStack margin={'auto'} gap={8} marginTop={'30px'} width={'60%'}  >
-        <Heading>Git - Stats</Heading>
+        <Heading color={colorMode==="light" ? '#F7F9FB' : '#5ab9ea'} >Git - Stats</Heading>
       <Center>
-      <GitHubCalendar  username="mdharis107" />
+      <GitHubCalendar  color={colorMode==="light" ? 'grey' : '#5ab9ea'} username="mdharis107" />
       </Center>
       </VStack>
  
