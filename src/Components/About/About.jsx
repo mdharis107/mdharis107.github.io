@@ -11,6 +11,8 @@ import {
     useBreakpointValue,
   } from '@chakra-ui/react';
   import styles from "./About.module.css"
+  import ScrollAnimation from "react-animate-on-scroll"
+  import 'animate.css'
   
   export default function About({colorMode, aboutRef}) {
    
@@ -24,7 +26,7 @@ import {
       backgroundPosition={'center center'} w={'full'} minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
          <Flex flex={1} justify='center' align={'center'}>
          
-        
+        <ScrollAnimation animateIn='animate__zoomIn'> 
           <Image 
             alt={'Login Image'}
             boxSize='350px'
@@ -34,14 +36,17 @@ import {
               'https://user-images.githubusercontent.com/104049398/190843442-025788f2-ef6d-417f-b728-6222df2505f8.JPG'
             }
           />
-
+</ScrollAnimation>
       
         
         </Flex>
         <Flex p={8} flex={1} align={'center'} justify={'center'}
        
           >
+
           <Stack spacing={6} w={'full'} maxW={'lg'}>
+          <ScrollAnimation animateIn='animate__bounceInLeft' duration={1.5}>
+
             <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
               <Box justifyContent={'center'} gap={2} display={'flex'} >
               <Text
@@ -67,6 +72,8 @@ import {
               </Text>{' '}
               </Box>
             </Heading>
+            </ScrollAnimation>
+                <ScrollAnimation animateIn='animate__fadeInRightBig' duration={'1.5'}>
             <Text textAlign={'left'}  className={colorMode==="light"? styles.aboutme_light : styles.aboutme_dark} >
                     Aspiring Full-Stack Developer,
                     Skilled in both front-end and back-end web development.
@@ -75,6 +82,7 @@ import {
                     Also, worked on NodeJs, Express, MongoDB DataBase. 
                     Always eager to learn new technologies to enhance my skills and bring value to the organization.
             </Text>
+            </ScrollAnimation>
             {/* <Stack direction={{ base: 'column', md: 'row' }} spacing={4}> */}
               {/* <Button 
               
