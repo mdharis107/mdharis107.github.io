@@ -25,6 +25,7 @@ import {
 
   SimpleGrid,
 } from '@chakra-ui/react';
+import ScrollAnimation from "react-animate-on-scroll";
 
 
 function PriceWrapper({ children }) {
@@ -123,13 +124,13 @@ export default function Project({colorMode,projectRef}) {
     backgroundPosition={'center center'} 
     w={'full'} minH={'100vh'}
      >
+      <ScrollAnimation animateIn='animate__bounceInDown' animateOnce duration={1.5}>
       <VStack spacing={2} textAlign="center">
         <Heading mt={12} mb={6} color= {colorMode==="light" ? '#F7F9FB' : '#5ab9ea'} alignContent='center' width={'140px'} borderBottom={'2px solid #46344E'}>
           Projects
         </Heading>
-
-        
       </VStack>
+      </ScrollAnimation>
 
       <Divider mt={6} mb={6}  />
       <Stack
@@ -143,7 +144,7 @@ export default function Project({colorMode,projectRef}) {
           
       <SimpleGrid columns={[1, 1, 2, 3]} spacing={4} >
          
-       
+      <ScrollAnimation animateIn='animate__fadeInLeftBig' animateOnce duration={1.5}>
         <PriceWrapper >
           <Box
             maxW={'400px'}
@@ -252,8 +253,9 @@ export default function Project({colorMode,projectRef}) {
       </Stack>
           </Box>
         </PriceWrapper>
-       
+      </ScrollAnimation>
 
+        <ScrollAnimation animateIn='animate__fadeInUpBig' animateOnce duration={1.5}>
         <PriceWrapper>
           <Box
             maxW={'400px'}
@@ -347,7 +349,9 @@ export default function Project({colorMode,projectRef}) {
       </Stack>
           </Box>
         </PriceWrapper>
+        </ScrollAnimation>
 
+        <ScrollAnimation animateIn='animate__fadeInRightBig' animateOnce duration={1.5}>
         <PriceWrapper>
         <Box
           maxW={'400px'}
@@ -439,6 +443,7 @@ export default function Project({colorMode,projectRef}) {
     </Stack>
         </Box>
         </PriceWrapper>
+        </ScrollAnimation>
 
         </SimpleGrid>
   

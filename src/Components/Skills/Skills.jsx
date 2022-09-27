@@ -32,6 +32,7 @@ import {
   BsGithub
 } from "react-icons/bs";
 import GitHubCalendar from "react-github-calendar"
+import ScrollAnimation from 'react-animate-on-scroll';
 
 
 export default function Skills({colorMode,skillsRef}) {
@@ -171,12 +172,13 @@ export default function Skills({colorMode,skillsRef}) {
         {/* <GridItem colSpan={1}> */}
           {/* <VStack alignItems="flex-start" spacing="20px">
             <chakra.h2 fontSize="3xl" fontWeight="700"> */}
+            <ScrollAnimation animateIn='animate__bounceInDown' animateOnce>
             <Center > 
             <Heading mt={12} mb={6} color= {colorMode==="light" ? '#F7F9FB' : '#5ab9ea'} alignContent='center' width={'100px'} borderBottom={'2px solid #46344E'}>
             Skills
             </Heading>
             </Center>
-            
+            </ScrollAnimation>
             {/* </chakra.h2>
           </VStack> */}
         {/* </GridItem> */}
@@ -188,6 +190,7 @@ export default function Skills({colorMode,skillsRef}) {
             Front End
             </Heading>
       </Center> */}
+      
       <Grid
       w={'100%'}
       margin='auto'
@@ -203,6 +206,7 @@ export default function Skills({colorMode,skillsRef}) {
 
 {FrontEnd.map((t) => {
           return (
+            <ScrollAnimation animateIn='animate__flipInY' animateOnce >
               <Button className={styles.anim}
               background='linear-gradient(to left, #33ccff 0%, #ff99cc 100%)'
               // transition='all 2s'
@@ -225,17 +229,21 @@ export default function Skills({colorMode,skillsRef}) {
                 </Box>
                 </Stack>
               </Button>
+              </ScrollAnimation>
           );
         })}
         
       </Grid>
       
-      
       <VStack margin={'auto'} gap={8} marginTop={'30px'} width={'60%'}  >
+      <ScrollAnimation animateIn='animate__bounceInDown' animateOnce duration={1.5}>
         <Heading color={colorMode==="light" ? '#F7F9FB' : '#5ab9ea'} >Git - Stats</Heading>
+        </ScrollAnimation>
+        <ScrollAnimation animateIn='animate__fadeIn' duration={1.5} animateOnce>
       <Center>
       <GitHubCalendar  color={colorMode==="light" ? 'grey' : '#5ab9ea'} username="mdharis107" />
       </Center>
+      </ScrollAnimation>
       </VStack>
  
     </Box>

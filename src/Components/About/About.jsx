@@ -26,7 +26,7 @@ import {
       backgroundPosition={'center center'} w={'full'} minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
          <Flex flex={1} justify='center' align={'center'}>
          
-        <ScrollAnimation animateIn='animate__zoomIn'> 
+        <ScrollAnimation animateIn='animate__zoomIn' animateOnce> 
           <Image 
             alt={'Login Image'}
             boxSize='350px'
@@ -45,7 +45,7 @@ import {
           >
 
           <Stack spacing={6} w={'full'} maxW={'lg'}>
-          <ScrollAnimation animateIn='animate__bounceInLeft' duration={1.5}>
+          <ScrollAnimation animateIn='animate__bounceInLeft' animateOnce duration={1.5}>
 
             <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
               <Box justifyContent={'center'} gap={2} display={'flex'} >
@@ -73,7 +73,7 @@ import {
               </Box>
             </Heading>
             </ScrollAnimation>
-                <ScrollAnimation animateIn='animate__fadeInRightBig' duration={'1.5'}>
+                <ScrollAnimation animateOnce animateIn='animate__fadeInRightBig' duration={'1.5'}>
             <Text textAlign={'left'}  className={colorMode==="light"? styles.aboutme_light : styles.aboutme_dark} >
                     Aspiring Full-Stack Developer,
                     Skilled in both front-end and back-end web development.
