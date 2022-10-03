@@ -114,7 +114,7 @@ export default function Contact({colorMode, contactRef}) {
                         color={colorMode==="light"? "#1a202c" : "white"}
                         _hover={{ border: '2px solid #1C6FEB' }}
                         leftIcon={<MdLocationOn color="#1970F1" size="20px" />}>
-                        Salem, India
+                        Salem, Tamil Nadu
                       </Button>
                     </VStack>
                   </Box>
