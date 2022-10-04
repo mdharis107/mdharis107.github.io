@@ -154,7 +154,7 @@ export default function Project({colorMode,projectRef}) {
             boxShadow={'2xl'}
             rounded={'md'}
             p={6}
-            // overflow={'hidden'}
+            overflow={'hidden'}
             >
             <Box
               // h={'280px'}

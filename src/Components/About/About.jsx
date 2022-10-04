@@ -75,12 +75,12 @@ import {
             </ScrollAnimation>
                 <ScrollAnimation animateOnce animateIn='animate__fadeInRightBig' duration={'1.5'}>
             <Text textAlign={'left'}  className={colorMode==="light"? styles.aboutme_light : styles.aboutme_dark} >
-                    Aspiring Full-Stack Developer,
+            Aspiring Full-Stack Developer,
                     Skilled in both front-end and back-end web development.
                     I have worked on several different projects collaboratively and solely. 
-                    I am a self-driven and passionate web developer skilled in JavaScript, React, and Redux and familiar with front-end frameworks. 
-                    Also, worked on NodeJs, Express, MongoDB DataBase. 
-                    Always eager to learn new technologies to enhance my skills and bring value to the organization.
+                    I am a self-driven and skilled in JavaScript, React, and Redux and familiar with front-end frameworks. 
+                    I have also worked on NodeJs, Express, and MongoDB DataBase. 
+                    Alw
             </Text>
             </ScrollAnimation>
             {/* <Stack direction={{ base: 'column', md: 'row' }} spacing={4}> */}
