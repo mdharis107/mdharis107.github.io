@@ -123,3 +123,57 @@
     background:linear-gradient(to right,#ff99cc, #33ccff 0%,  100%);
   }
 
+
+  .btn_flip {
+    opacity: 1;
+    outline: 0;
+    color: black;
+    border-radius: 5px;
+    line-height: 40px;
+    position: relative;
+    text-align: center;
+    letter-spacing: 1px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .btn_flip:hover:after {
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+  }
+  .btn_flip:hover:before {
+    /* border-radius: 5px; */
+    opacity: 0;
+    transform: translateY(50%) rotateX(90deg);
+  }
+  .btn_flip:after {
+    border-radius: 5px;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    color: black;
+    display: block;
+    transition: 0.5s;
+    position: absolute;
+    background: linear-gradient(to right, #33ccff 0%, #ff99cc 100%);
+    content: attr(data-back);
+    transform: translateY(-50%) rotateX(90deg);
+  }
+  .btn_flip:before {
+
+    border-radius: 5px;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    color: black;
+    display: block;
+    padding: 0 40px;
+    line-height: 40px;
+    transition: 0.5s;
+    position: relative;
+    background: linear-gradient(to left, #33ccff 0%, #ff99cc 100%);
+    content: attr(data-front);
+    transform: translateY(0) rotateX(0);
+  }
+  

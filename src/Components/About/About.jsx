@@ -13,6 +13,7 @@ import {
   import styles from "./About.module.css"
   import ScrollAnimation from "react-animate-on-scroll"
   import 'animate.css'
+  import {BsCode} from "react-icons/bs"
   
   export default function About({colorMode, aboutRef}) {
    
@@ -75,27 +76,21 @@ import {
             </ScrollAnimation>
                 <ScrollAnimation animateOnce animateIn='animate__fadeInRightBig' duration={'1.5'}>
             <Text textAlign={'left'}  className={colorMode==="light"? styles.aboutme_light : styles.aboutme_dark} >
-            Aspiring Full-Stack Developer,
-                    Skilled in both front-end and back-end web development.
-                    I have worked on several different projects collaboratively and solely. 
-                    I am a self-driven and skilled in JavaScript, React, and Redux and familiar with front-end frameworks. 
-                    I have also worked on NodeJs, Express, and MongoDB DataBase. 
-                    Alw
+            
+            <ul>
+              <th>Aspiring Full-Stack Developer</th>
+              <li> Skilled in both Front-end and Back-end web development.</li>
+              <li>I have worked on several projects collaboratively and solely.</li>
+              <li>I am a self-driven and skilled in JavaScript, React and Redux and also familiar with front-end frameworks.</li>
+              <li>I have also worked on NodeJs, Express, and MongoDB DataBase. </li>
+            </ul>
+                    {/* Skilled in both front-end and back-end web development. <br />
+                    I have worked on several projects collaboratively and solely.  <br />
+                    I am a self-driven and skilled in JavaScript, React and Redux and also familiar with front-end frameworks.  <br />
+                    I have also worked on NodeJs, Express, and MongoDB DataBase.  */}
             </Text>
             </ScrollAnimation>
-            {/* <Stack direction={{ base: 'column', md: 'row' }} spacing={4}> */}
-              {/* <Button 
-              
-                rounded={'full'}
-                bg={'blue.400'}
-                color={'white'}
-                _hover={{
-                  bg: 'blue.500',
-                }}>
-                Create Project
-              </Button> */}
-              {/* <Button rounded={'full'}>How It Works</Button> */}
-            {/* </Stack> */}
+          
           </Stack>
         </Flex>
        

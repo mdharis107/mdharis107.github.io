@@ -12,6 +12,7 @@ import {
   import { BsGithub} from 'react-icons/bs'
   import { BsLinkedin} from 'react-icons/bs'
  import styles from "./Home.module.css"
+ import {HiOutlineDocumentDownload} from "react-icons/hi"
 
   
   export default function Home({homeRef,colorMode}) {
@@ -79,20 +80,21 @@ import {
                 <Box   >
                
                 {/* <Link    _hover={{textDecoration:"none"}} href='https://drive.google.com/file/d/1qMnwNd1uqkUwpb5eHR76eVI8HpTfsuMM/view?usp=sharing'  target='_blank' transition='all 2s'> */}
-                <Button
+                <button
                 onClick={handleDownload}
-                  textDecoration='none'
-                  _hover={{
-                transition:'all 5s',
-                  textDecoration:'none',
-                    color:"black",
-                    background:'linear-gradient(to left, #33ccff 0%, #ff99cc 100%)'
-                  }}
+                  // textDecoration='none'
+                  className={styles.btn_flip} data-back= {'RESUME'} data-front="RESUME"
+                //   _hover={{
+                // transition:'all 5s',
+                //   textDecoration:'none',
+                //     color:"black",
+                //     background:'linear-gradient(to left, #33ccff 0%, #ff99cc 100%)'
+                //   }}
 
-                 background='linear-gradient(to right, #33ccff 0%, #ff99cc 100%)' 
-                transition='all 5s'
+                //  background='linear-gradient(to right, #33ccff 0%, #ff99cc 100%)' 
+                // transition='all 5s'
                   
-                >RESUME</Button>
+                ></button>
                 {/* </Link> */}
                 
                 </Box>
