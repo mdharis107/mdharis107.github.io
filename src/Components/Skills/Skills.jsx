@@ -237,7 +237,7 @@ export default function Skills({colorMode,skillsRef}) {
       
       <VStack margin={'auto'} gap={8} marginTop={'30px'} width={'60%'}  >
       <ScrollAnimation animateIn='animate__bounceInDown' animateOnce duration={1.5}>
-        <Heading color={colorMode==="light" ? '#F7F9FB' : '#5ab9ea'} >Git - Stats</Heading>
+        <Heading borderBottom={'2px solid #46344E'} color={colorMode==="light" ? '#F7F9FB' : '#5ab9ea'} >Git - Stats</Heading>
         </ScrollAnimation>
         <ScrollAnimation animateIn='animate__fadeIn' duration={1.5} animateOnce>
       <Center>

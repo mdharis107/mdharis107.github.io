@@ -7,6 +7,7 @@ import Navbar from '../Navbar/Navbar';
 import Projects from '../Projects/Projects';
 import Skills from '../Skills/Skills';
 import About from '../About/About';
+import Footer from '../Footer/Footer';
 
 
 
@@ -27,7 +28,7 @@ function Portfolio() {
             <Skills skillsRef={skillsRef} colorMode={colorMode}/>
             <Projects projectRef={projectRef} colorMode={colorMode}/>
             <Contact contactRef={contactRef} colorMode={colorMode} />
-            
+            <Footer colorMode={colorMode} />
         </div>
     );
 }

@@ -30,6 +30,7 @@ import {
 import { BsGithub,BsLinkedin, BsPerson } from 'react-icons/bs';
 // import { EmailIcon } from '@chakra-ui/icons';
 import emailjs from '@emailjs/browser';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 // function Alerting(){
 //   <Alert status='success'>
@@ -59,7 +60,7 @@ export default function Contact({colorMode, contactRef}) {
 
   return (
     // https://images.unsplash.com/photo-1653289755854-a41949e96282?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80
-    <Container ref={contactRef} paddingTop={'20px'} w={'full'}
+    <Container ref={contactRef} paddingTop={'20px'} w={'full'} pb={5}
     h={'full'}
     background='fixed'
     backgroundImage={ colorMode==="light"?
@@ -68,6 +69,7 @@ export default function Contact({colorMode, contactRef}) {
     }
     backgroundSize={'cover'}
     backgroundPosition={'center center'} maxW="full" mt={0} centerContent overflow="hidden">
+      <ScrollAnimation animateIn='animate__bounceInDown' animateOnce duration={1.5}>
       <Flex>
       {/* #02054B */}
         <Box
@@ -229,6 +231,7 @@ export default function Contact({colorMode, contactRef}) {
           </Box>
         </Box>
       </Flex>
+      </ScrollAnimation>
     </Container>
   );
 }
