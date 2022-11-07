@@ -6,7 +6,12 @@ import {
   FaHtml5,
   FaCss3Alt,
   FaBootstrap,
+  FaReact,
 } from "react-icons/fa";
+import {
+  SiRedux,
+} from "react-icons/si";
+
 
 
 import { BsGithub, BsLink45Deg} from 'react-icons/bs'
@@ -255,7 +260,7 @@ export default function Project({colorMode,projectRef}) {
         </PriceWrapper>
       </ScrollAnimation>
 
-        <ScrollAnimation animateIn='animate__fadeInUpBig' animateOnce duration={1.5}>
+        <ScrollAnimation animateIn='animate__fadeInLeftBig' animateOnce duration={1.5}>
         <PriceWrapper>
           <Box
             maxW={'400px'}
@@ -351,7 +356,7 @@ export default function Project({colorMode,projectRef}) {
         </PriceWrapper>
         </ScrollAnimation>
 
-        <ScrollAnimation animateIn='animate__fadeInRightBig' animateOnce duration={1.5}>
+        <ScrollAnimation animateIn='animate__fadeInLeftBig' animateOnce duration={1.5}>
         <PriceWrapper>
         <Box
           maxW={'400px'}
@@ -437,6 +442,100 @@ export default function Project({colorMode,projectRef}) {
         
         <Box>
         <Button className={colorMode==="light"? styles.btn_light : styles.btn_dark} as={'a'} href="https://github.com/abhijitnr/-gas-face-3608" _hover={{textDecoration:"none" }} target='_blank'  w={'100px'}> GITHUB <span style={{ marginLeft:"10px" }}><BsGithub/></span></Button>    
+        </Box>
+      </Box>
+
+    </Stack>
+        </Box>
+        </PriceWrapper>
+        </ScrollAnimation>
+
+        <ScrollAnimation animateIn='animate__fadeInRightBig' animateOnce duration={1.5}>
+        <PriceWrapper>
+        <Box
+          maxW={'400px'}
+          w={'full'}
+          // width={'auto'}
+          bg={useColorModeValue('white', 'gray.900')}
+          boxShadow={'2xl'}
+          rounded={'md'}
+          p={6}
+          overflow={'hidden'}>
+          <Box
+            // h={'280px'}
+            bg={'gray.100'}
+            mt={-6}
+            mx={-6}
+            mb={6}
+            pos={'relative'}>
+            <Image
+            transform="scale(1.0)"
+            width="100%"
+            transition="0.3s ease-in-out"
+            _hover={{
+              transform: 'scale(1.05)',
+            }}
+            h={'210px'}
+              src='https://user-images.githubusercontent.com/75201337/200176709-f72a2d08-b2ce-4946-bb16-034f539fc6bb.png'
+              layout={'fill'}
+            />
+          </Box>
+                  
+  <Stack pt={0} align={'center'}>
+  <Heading
+ color={'green.500'}
+              textTransform={'uppercase'}
+              fontWeight={700}
+              letterSpacing={1.1} fontSize={'2xl'} fontFamily={'body'} >
+      Clockify-Clockify
+    </Heading>
+    <Text color={'gray.500'} fontSize={'16'} >
+    A web Application for time tracking and timeSheet. Unlike all the other time trackers, Clockify lets you have an unlimited access.
+    </Text>
+    </Stack>
+    
+    <Stack marginTop={'2'}  direction={'column'} align={'center'}>
+    
+        <Box>
+        <Text fontWeight={800} fontSize={'xl'}>
+        Tech stack
+        </Text>
+               <Box marginTop={'2'}  display={"flex"} gap={'8'}>
+                  
+                   <Box>
+                    <Button
+                    boxSize={'50px'}
+                        fontSize={'20px'}
+                        color={'blue.400'}>
+                    <FaReact />
+                  </Button>
+                    </Box>
+                    
+                    <Button
+                    color="red.500"
+                    fontSize={'20px'}
+                       boxSize={"50px"} >
+                        <SiRedux />
+                    </Button>
+                    <Button
+                    color="yellow.400"
+                   
+                    fontSize={'20px'}
+                       boxSize={"50px"} >
+                        <SiJavascript />
+                       </Button>
+                </Box>
+        </Box>
+
+        <Divider mt={12} mb={12}  />
+
+      <Box gap={8} display={'flex'}>
+        <Box>
+              <Button className={colorMode==="light"? styles.btn_light : styles.btn_dark} as={'a'} href="https://clockify-clone.vercel.app/" _hover={{textDecoration:"none" }} target='_blank' w={'100px'} >LIVE<span style={{ marginLeft:"10px" }}><BsLink45Deg /></span></Button>
+        </Box>
+        
+        <Box>
+        <Button className={colorMode==="light"? styles.btn_light : styles.btn_dark} as={'a'} href="https://github.com/mdharis107/Clockify-Clockify" _hover={{textDecoration:"none" }} target='_blank'  w={'100px'}> GITHUB <span style={{ marginLeft:"10px" }}><BsGithub/></span></Button>    
         </Box>
       </Box>
 

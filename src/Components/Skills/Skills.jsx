@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import styles from "./Skills.module.css";
 import {
   Box,
@@ -10,14 +10,18 @@ import {
   Text,
   Stack,
   Center,
-} from '@chakra-ui/react';
+  Image,
+} from "@chakra-ui/react";
 import {
   SiChakraui,
   SiJavascript,
   SiNodedotjs,
   SiCss3,
   SiRedux,
+  SiExpress,
+  SiMongodb
 } from "react-icons/si";
+// import {SiExpress} from "react-icons/si"
 import {
   FaGitAlt,
   FaHtml5,
@@ -25,18 +29,12 @@ import {
   FaCss3Alt,
   FaBootstrap,
 } from "react-icons/fa";
-import {
-  GrHeroku
-} from "react-icons/gr";
-import {
-  BsGithub
-} from "react-icons/bs";
-import GitHubCalendar from "react-github-calendar"
-import ScrollAnimation from 'react-animate-on-scroll';
+import { GrHeroku,  } from "react-icons/gr";
+import { BsGithub } from "react-icons/bs";
+import GitHubCalendar from "react-github-calendar";
+import ScrollAnimation from "react-animate-on-scroll";
 
-
-export default function Skills({colorMode,skillsRef}) {
-
+export default function Skills({ colorMode, skillsRef }) {
   const FrontEnd = [
     {
       name: "HTML",
@@ -98,7 +96,7 @@ export default function Skills({colorMode,skillsRef}) {
       icon: <SiNodedotjs />,
       color: "green.500",
     },
-    
+
     {
       name: "HeroKu",
       link: "https://nodejs.org/en/",
@@ -110,6 +108,16 @@ export default function Skills({colorMode,skillsRef}) {
       link: "https://nodejs.org/en/",
       icon: <BsGithub />,
       color: "black",
+    },
+    {
+      name: "Express",
+      icon: <SiExpress />,
+      color: "#444",
+    },
+    {
+      name: "Mongo DB",
+      icon: <SiMongodb />,
+      color: "#43853d",
     },
     
   ];
@@ -150,16 +158,20 @@ export default function Skills({colorMode,skillsRef}) {
   //   },
   // ]
   return (
-    
-    <Box ref={skillsRef}    backgroundImage={ 
-      colorMode==="light" ? 'linear-gradient(to top, #303136, #393f54, #414d75, #485c96, #4e6bb9, #5470c7, #5b75d6, #6479e4, #6e73e0, #776ddb, #8067d6, #8860d0);-gradient(circle, #c1c8e4, #afbae6, #9dade7, #8a9fe8, #7592e9, #6f8ae8, #6981e6, #6479e4, #6e73e0, #776ddb, #8067d6, #8860d0)' :
-    'linear-gradient(to right, #25274d, #2b2d52, #313356, #383a5b, #3e4060, #404565, #414a6b, #434f70, #3f5477, #3a597e, #335f84, #29648a)'
-     }
-     backgroundSize={'cover'}
-     backgroundPosition={'center center'} 
-     w={'full'} minH={'100vh'} 
-      paddingBottom='1px' paddingTop={'10px'}
-     >
+    <Box
+      ref={skillsRef}
+      backgroundImage={
+        colorMode === "light"
+          ? "linear-gradient(to top, #303136, #393f54, #414d75, #485c96, #4e6bb9, #5470c7, #5b75d6, #6479e4, #6e73e0, #776ddb, #8067d6, #8860d0);-gradient(circle, #c1c8e4, #afbae6, #9dade7, #8a9fe8, #7592e9, #6f8ae8, #6981e6, #6479e4, #6e73e0, #776ddb, #8067d6, #8860d0)"
+          : "linear-gradient(to right, #25274d, #2b2d52, #313356, #383a5b, #3e4060, #404565, #414a6b, #434f70, #3f5477, #3a597e, #335f84, #29648a)"
+      }
+      backgroundSize={"cover"}
+      backgroundPosition={"center center"}
+      w={"full"}
+      minH={"100vh"}
+      paddingBottom="1px"
+      paddingTop={"10px"}
+    >
       {/* <Divider mt={12} mb={12} /> */}
       {/* {colorMode==="light"? "": <Divider mt={12} mb={12} /> }  */}
       {/* <Grid
@@ -169,83 +181,121 @@ export default function Skills({colorMode,skillsRef}) {
           md: 'repeat(2, 1fr)',
         }}
         gap={4}> */}
-        {/* <GridItem colSpan={1}> */}
-          {/* <VStack alignItems="flex-start" spacing="20px">
+      {/* <GridItem colSpan={1}> */}
+      {/* <VStack alignItems="flex-start" spacing="20px">
             <chakra.h2 fontSize="3xl" fontWeight="700"> */}
-            <ScrollAnimation animateIn='animate__bounceInDown' animateOnce>
-            <Center > 
-            <Heading mt={12} mb={6} color= {colorMode==="light" ? '#F7F9FB' : '#5ab9ea'} alignContent='center' width={'100px'} borderBottom={'2px solid #46344E'}>
+      <ScrollAnimation animateIn="animate__bounceInDown" animateOnce>
+        <Center>
+          <Heading
+            mt={12}
+            mb={6}
+            color={colorMode === "light" ? "#F7F9FB" : "#5ab9ea"}
+            alignContent="center"
+            width={"100px"}
+            borderBottom={"2px solid #46344E"}
+          >
             Skills
-            </Heading>
-            </Center>
-            </ScrollAnimation>
-            {/* </chakra.h2>
+          </Heading>
+        </Center>
+      </ScrollAnimation>
+      {/* </chakra.h2>
           </VStack> */}
-        {/* </GridItem> */}
-       
+      {/* </GridItem> */}
+
       {/* </Grid> */}
-      <Divider  mt={12} mb={12}  />
+      <Divider mt={12} mb={12} />
       {/* <Center marginBottom={'10'}>
             <Heading alignContent='center'  >
             Front End
             </Heading>
       </Center> */}
-      
+
       <Grid
-      w={'100%'}
-      margin='auto'
-      justifyItems={'center'}
-      
+        w={"100%"}
+        margin="auto"
+        justifyItems={"center"}
         templateColumns={{
-          base: 'repeat(2, 1fr)',
-          sm: 'repeat(3, 1fr)',
-          md: 'repeat(4, 1fr)',
+          base: "repeat(2, 1fr)",
+          sm: "repeat(3, 1fr)",
+          md: "repeat(4, 1fr)",
         }}
-        gap={{ base: '1', sm: '2', md: '8' }}
-        rowGap='10'>
-
-{FrontEnd.map((t) => {
+        gap={{ base: "1", sm: "2", md: "8" }}
+        rowGap="10"
+      >
+        {FrontEnd.map((t) => {
           return (
-            <ScrollAnimation animateIn='animate__flipInY' animateOnce >
-              <Button className={styles.anim}
-              background='linear-gradient(to left, #33ccff 0%, #ff99cc 100%)'
-              // transition='all 2s'
-              variant={'outine'}
-                   boxSize={'150px'} 
-                   color='#F2F2F2'
-                  _hover={{
-                    color:"black",
-                    background:'linear-gradient(to right, #33ccff 0%, #ff99cc 100%)'
-                  }}  >
-                    
-                    <Stack justifyContent={"center"}
-                alignItems={"center"}>
-
-                 <Box fontSize={"50"} color={t.color}>
-                  {t.icon}
-                </Box>
-                <Box>
-                <Text fontSize={"20"}>{t.name}</Text>
-                </Box>
+            <ScrollAnimation animateIn="animate__flipInY" animateOnce>
+              <Button
+                className={styles.anim}
+                background="linear-gradient(to left, #33ccff 0%, #ff99cc 100%)"
+                // transition='all 2s'
+                variant={"outline"}
+                boxSize={"150px"}
+                color="#F2F2F2"
+                _hover={{
+                  color: "black",
+                  background:
+                    "linear-gradient(to right, #33ccff 0%, #ff99cc 100%)",
+                }}
+              >
+                <Stack justifyContent={"center"} alignItems={"center"}>
+                  <Box fontSize={"50"} color={t.color}>
+                    {t.icon}
+                  </Box>
+                  <Box>
+                    <Text fontSize={"20"}>{t.name}</Text>
+                  </Box>
                 </Stack>
               </Button>
-              </ScrollAnimation>
+            </ScrollAnimation>
           );
         })}
-        
       </Grid>
-      
-      <VStack margin={'auto'} gap={8} marginTop={'30px'} width={'60%'}  >
-      <ScrollAnimation animateIn='animate__bounceInDown' animateOnce duration={1.5}>
-        <Heading borderBottom={'2px solid #46344E'} color={colorMode==="light" ? '#F7F9FB' : '#5ab9ea'} >Git - Stats</Heading>
+
+      <VStack margin={"auto"} gap={8} marginTop={"30px"} width={"60%"}>
+        <ScrollAnimation
+          animateIn="animate__bounceInDown"
+          animateOnce
+          duration={1.5}
+        >
+          <Heading
+            borderBottom={"2px solid #46344E"}
+            color={colorMode === "light" ? "#F7F9FB" : "#5ab9ea"}
+          >
+            Git - Stats
+          </Heading>
         </ScrollAnimation>
-        <ScrollAnimation animateIn='animate__fadeIn' duration={1.5} animateOnce>
-      <Center>
-      <GitHubCalendar  color={colorMode==="light" ? 'grey' : '#5ab9ea'} username="mdharis107" />
-      </Center>
-      </ScrollAnimation>
+        <ScrollAnimation animateIn="animate__fadeIn" duration={1.5} animateOnce>
+          <Center mb={10}>
+            <GitHubCalendar
+              color={colorMode === "light" ? "grey" : "#5ab9ea"}
+              username="mdharis107"
+            />
+          </Center>
+
+          <Grid
+            mb={10}
+            rowGap={8}
+            justifyContent={"center"}
+            alignItems={"center"}
+          >
+            {/* <Center> */}
+            <Image
+              w={{ base: "200", sm: "100", md: "100" }}
+              align="center"
+              src="https://github-readme-streak-stats.herokuapp.com/?user=mdharis107&theme=radical"
+              alt="haris"
+            />
+            {/* </Center> */}
+            <Image
+              w={{ base: "100", sm: "100", md: "100" }}
+              align="center"
+              src="https://github-readme-stats.vercel.app/api?username=mdharis107&theme=radical&hide_border=false&include_all_commits=false&count_private=true"
+              alt="haris"
+            />
+          </Grid>
+        </ScrollAnimation>
       </VStack>
- 
     </Box>
   );
 }
