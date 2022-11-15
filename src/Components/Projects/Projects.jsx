@@ -1,21 +1,10 @@
-import styles from "./Project.module.css"
-import {
-  SiJavascript,
-} from "react-icons/si";
-import {
-  FaHtml5,
-  FaCss3Alt,
-  FaBootstrap,
-  FaReact,
-} from "react-icons/fa";
-import {
-  SiRedux,
-} from "react-icons/si";
+import styles from "./Project.module.css";
+import { SiJavascript } from "react-icons/si";
+import { FaHtml5, FaCss3Alt, FaBootstrap, FaReact } from "react-icons/fa";
+import { SiRedux } from "react-icons/si";
 
-
-
-import { BsGithub, BsLink45Deg} from 'react-icons/bs'
-import React from 'react';
+import { BsGithub, BsLink45Deg } from "react-icons/bs";
+import React from "react";
 
 import {
   Box,
@@ -27,14 +16,11 @@ import {
   Button,
   Image,
   Divider,
-
   SimpleGrid,
-} from '@chakra-ui/react';
+} from "@chakra-ui/react";
 import ScrollAnimation from "react-animate-on-scroll";
 
-
 function PriceWrapper({ children }) {
-
   // const cards = [
   //   {
   //     title: "YOOX - Clone",
@@ -94,458 +80,618 @@ function PriceWrapper({ children }) {
   //       'linear-gradient(to bottom, #25274d, #2d294d, #342b4e, #3a2e4e, #3f304e, #473558, #503961, #593e6b, #664682, #734e9b, #7e57b5, #8860d0);',
   //   },
   // ];
-  
+
   return (
     <Box
-    
       mb={4}
-      
       shadow="base"
       borderWidth="1px"
-      alignSelf={{ base: 'center', lg: 'flex-start' }}
-      borderColor={useColorModeValue('gray.200', 'gray.500')}
-      borderRadius={'xl'}
+      alignSelf={{ base: "center", lg: "flex-start" }}
+      borderColor={useColorModeValue("gray.200", "gray.500")}
+      borderRadius={"xl"}
       transform="scale(1.0)"
       transition="0.3s ease-in-out"
       _hover={{
-        transform: 'scale(1.05)',
-       boxShadow: "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;"
+        transform: "scale(1.05)",
+        boxShadow:
+          "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;",
       }}
-      cursor='pointer'
-      >
+      cursor="pointer"
+    >
       {children}
     </Box>
   );
 }
 
-export default function Project({colorMode,projectRef}) {
-
+export default function Project({ colorMode, projectRef }) {
   // linear-gradient(to right, #25274d, #2b2d52, #313356, #383a5b, #3e4060, #404565, #414a6b, #434f70, #3f5477, #3a597e, #335f84, #29648a)
 
   return (
-    <Box ref={projectRef}  py={5} backgroundImage={colorMode==="light" ? "linear-gradient(to bottom, #303136, #3c4250, #43556c, #466988, #437ea5, #4b8fb4, #54a1c2, #5fb3d0, #80c3d5, #9fd3dc, #bfe3e5, #def2f1)":
-    " linear-gradient(to right, #25274d, #2b2d52, #313356, #383a5b, #3e4060, #404565, #414a6b, #434f70, #3f5477, #3a597e, #335f84, #29648a)"}
-    backgroundSize={'cover'}
-    backgroundPosition={'center center'} 
-    w={'full'} minH={'100vh'}
-     >
-      <ScrollAnimation animateIn='animate__bounceInDown' animateOnce duration={1.5}>
-      <VStack spacing={2} textAlign="center">
-        <Heading mt={12} mb={6} color= {colorMode==="light" ? '#F7F9FB' : '#5ab9ea'} alignContent='center' width={'140px'} borderBottom={'2px solid #46344E'}>
-          Projects
-        </Heading>
-      </VStack>
+    <Box
+      ref={projectRef}
+      py={5}
+      backgroundImage={
+        colorMode === "light"
+          ? "linear-gradient(to bottom, #303136, #3c4250, #43556c, #466988, #437ea5, #4b8fb4, #54a1c2, #5fb3d0, #80c3d5, #9fd3dc, #bfe3e5, #def2f1)"
+          : " linear-gradient(to right, #25274d, #2b2d52, #313356, #383a5b, #3e4060, #404565, #414a6b, #434f70, #3f5477, #3a597e, #335f84, #29648a)"
+      }
+      backgroundSize={"cover"}
+      backgroundPosition={"center center"}
+      w={"full"}
+      minH={"100vh"}
+    >
+      <ScrollAnimation
+        animateIn="animate__bounceInDown"
+        animateOnce
+        duration={1.5}
+      >
+        <VStack spacing={2} textAlign="center">
+          <Heading
+            mt={12}
+            mb={6}
+            color={colorMode === "light" ? "#F7F9FB" : "#5ab9ea"}
+            alignContent="center"
+            width={"140px"}
+            borderBottom={"2px solid #46344E"}
+          >
+            Projects
+          </Heading>
+        </VStack>
       </ScrollAnimation>
 
-      <Divider mt={6} mb={6}  />
+      <Divider mt={6} mb={6} />
       <Stack
-      p={10}
-        direction={{ base: 'column', md: 'row' }}
+        p={10}
+        direction={{ base: "column", md: "row" }}
         textAlign="center"
         justify="center"
         spacing={{ base: 4, lg: 10 }}
         py={10}
-        >
-          
-      <SimpleGrid columns={[1, 1, 2, 3]} spacing={4} >
-         
-      <ScrollAnimation animateIn='animate__fadeInLeftBig' animateOnce duration={1.5}>
-        <PriceWrapper >
-          <Box
-            maxW={'400px'}
-            w={'full'}
-            // width={'100%'}
-            bg={useColorModeValue('white', 'gray.900')}
-            boxShadow={'2xl'}
-            rounded={'md'}
-            p={6}
-            overflow={'hidden'}
-            >
-            <Box
-              // h={'280px'}
-              bg={'gray.100'}
-              mt={-6}
-              mx={-6}
-              mb={6}
-              pos={'relative'}>
-              <Image
-              transform="scale(1.0)"
-              width="100%"
-              transition="0.3s ease-in-out"
-              _hover={{
-                transform: 'scale(1.05)',
-              }}
+      >
+        <SimpleGrid columns={[1, 1, 2, 3]} spacing={4}>
+          <ScrollAnimation
+            animateIn="animate__fadeInLeftBig"
+            animateOnce
+            duration={1.5}
+          >
+            <PriceWrapper>
+              <Box
+                maxW={"400px"}
+                w={"full"}
+                // width={'100%'}
+                bg={useColorModeValue("white", "gray.900")}
+                boxShadow={"2xl"}
+                rounded={"md"}
+                p={6}
+                overflow={"hidden"}
+              >
+                <Box
+                  // h={'280px'}
+                  bg={"gray.100"}
+                  mt={-6}
+                  mx={-6}
+                  mb={6}
+                  pos={"relative"}
+                >
+                  <Image
+                    transform="scale(1.0)"
+                    width="100%"
+                    transition="0.3s ease-in-out"
+                    _hover={{
+                      transform: "scale(1.05)",
+                    }}
+                    h={"240px"}
+                    src={
+                      "https://user-images.githubusercontent.com/104049398/190868426-c5f0734a-a469-4280-bbb7-e597a0c5a7cb.png"
+                    }
+                    layout={"fill"}
+                  />
+                </Box>
 
-              h={'240px'}
-                src={
-                'https://user-images.githubusercontent.com/104049398/190868426-c5f0734a-a469-4280-bbb7-e597a0c5a7cb.png'
-                }
-                layout={'fill'}
-              />
-            </Box>
-                    
-    <Stack pt={0} align={'center'}>
-    <Heading
-  color={'green.500'}
-                textTransform={'uppercase'}
-                fontWeight={700}
-                letterSpacing={1.1} fontSize={'2xl'} fontFamily={'body'} >
-        YOOX - Clone
-      </Heading>
-      <Text color={'gray.500'} fontSize={'16'}>
-      A clothing online shopping web application for men, women and kids
-      </Text>
-      </Stack>
-      
-      <Stack marginTop={'2'}  direction={'column'} align={'center'}>
-      
-          <Box>
-          <Text fontWeight={800} fontSize={'xl'}>
-          Tech stack
-          </Text>
-                <Box  marginTop={'2'}  display={"flex"} gap={'5'}>
-                    
-                  
-                      <Button
-                      boxSize={'50px'}
-                          fontSize={'20px'}
-                          color={'red'}>
-                      <FaHtml5 />
-                    </Button>
-                      
-                      <Button
-                      color="green"
-                      fontSize={'20px'}
-                        boxSize={"50px"} >
-                          <FaCss3Alt />
+                <Stack pt={0} align={"center"}>
+                  <Heading
+                    color={"green.500"}
+                    textTransform={"uppercase"}
+                    fontWeight={700}
+                    letterSpacing={1.1}
+                    fontSize={"2xl"}
+                    fontFamily={"body"}
+                  >
+                    YOOX - Clone
+                  </Heading>
+                  <Text color={"gray.500"} fontSize={"16"}>
+                    A clothing online shopping web application for men, women
+                    and kids
+                  </Text>
+                </Stack>
+
+                <Stack marginTop={"2"} direction={"column"} align={"center"}>
+                  <Box>
+                    <Text fontWeight={800} fontSize={"xl"}>
+                      Tech stack
+                    </Text>
+                    <Box marginTop={"2"} display={"flex"} gap={"5"}>
+                      <Button boxSize={"50px"} fontSize={"20px"} color={"red"}>
+                        <FaHtml5 />
                       </Button>
-                     
+
+                      <Button color="green" fontSize={"20px"} boxSize={"50px"}>
+                        <FaCss3Alt />
+                      </Button>
+
                       <Button
-                      color="yellow.400"
-                    
-                      fontSize={'20px'}
-                        boxSize={"50px"} >
-                          <SiJavascript />
-                        </Button>
-                     
-                      <Button 
-                      ransition='all 2s'
-                      fontSize={'20px'}
-                      boxSize={'50px'}
-                      color="purple"
+                        color="yellow.400"
+                        fontSize={"20px"}
+                        boxSize={"50px"}
+                      >
+                        <SiJavascript />
+                      </Button>
+
+                      <Button
+                        ransition="all 2s"
+                        fontSize={"20px"}
+                        boxSize={"50px"}
+                        color="purple"
                         // _hover={{
                         //   background:'linear-gradient(to right, #33ccff 0%, #ff99cc 100%)'
                         // }}
-                        >
-                          <FaBootstrap/>
-                          
-                        </Button>
+                      >
+                        <FaBootstrap />
+                      </Button>
+                    </Box>
                   </Box>
-          </Box>
 
-          <Divider mt={12} mb={12}  />
+                  <Divider mt={12} mb={12} />
 
-        <Box gap={8} display={'flex'}>
-          <Box  >
-                <Button className={colorMode==="light"? styles.btn_light : styles.btn_dark} as={'a'} href="https://candid-starship-25c3ab.netlify.app/" _hover={{textDecoration:"none" }} target='_blank' w={'100px'} >LIVE<span style={{ marginLeft:"10px" }}><BsLink45Deg /></span></Button>
-          </Box>
-          
-          <Box>
-          <Button className={colorMode==="light"? styles.btn_light : styles.btn_dark} as={'a'} href="https://github.com/arulxavierax/Project-U2-YOOX" _hover={{textDecoration:"none" }} target='_blank'  w={'100px'}> GITHUB <span style={{ marginLeft:"10px" }}><BsGithub/></span></Button>    
-          </Box>
-        </Box>
-
-      </Stack>
-          </Box>
-        </PriceWrapper>
-      </ScrollAnimation>
-
-        <ScrollAnimation animateIn='animate__fadeInLeftBig' animateOnce duration={1.5}>
-        <PriceWrapper>
-          <Box
-            maxW={'400px'}
-            w={'full'}
-            bg={useColorModeValue('white', 'gray.900')}
-            boxShadow={'2xl'}
-            rounded={'md'}
-            p={6}
-            overflow={'hidden'}>
-            <Box
-              // h={'280px'}
-              bg={'gray.100'}
-              mt={-6}
-              mx={-6}
-              mb={6}
-              pos={'relative'}>
-              <Image
-              transform="scale(1.0)"
-              width="100%"
-              transition="0.3s ease-in-out"
-              _hover={{
-                transform: 'scale(1.05)',
-              }}
-              h={'240px'}
-                src='https://user-images.githubusercontent.com/104049398/190868611-1d2472d8-e07f-4984-b16e-9d2ddde4e281.png
-                '
-                layout={'fill'}
-              />
-            </Box>
-                    
-    <Stack pt={0} align={'center'}>
-    <Heading
-  color={'green.500'}
-                textTransform={'uppercase'}
-                fontWeight={700}
-                letterSpacing={1.1} fontSize={'2xl'} fontFamily={'body'} >
-        bewakoof - Clone
-      </Heading>
-      <Text color={'gray.500'} fontSize={'16'} >
-      Online shopping web application clothing for the latest fashion and accessory trends
-      </Text>
-      </Stack>
-      
-      <Stack marginTop={'2'}  direction={'column'} align={'center'}>
-      
-          <Box>
-          <Text fontWeight={800} fontSize={'xl'}>
-          Tech stack
-          </Text>
-                <Box marginTop={'2'}  display={"flex"} gap={'8'}>
-                    
+                  <Box gap={8} display={"flex"}>
                     <Box>
                       <Button
-                      boxSize={'50px'}
-                          fontSize={'20px'}
-                          color={'red'}>
-                      <FaHtml5 />
-                    </Button>
-                      </Box>
-                      
+                        className={
+                          colorMode === "light"
+                            ? styles.btn_light
+                            : styles.btn_dark
+                        }
+                        as={"a"}
+                        href="https://candid-starship-25c3ab.netlify.app/"
+                        _hover={{ textDecoration: "none" }}
+                        target="_blank"
+                        w={"100px"}
+                      >
+                        LIVE
+                        <span style={{ marginLeft: "10px" }}>
+                          <BsLink45Deg />
+                        </span>
+                      </Button>
+                    </Box>
+
+                    <Box>
                       <Button
-                      color="green"
-                      fontSize={'20px'}
-                        boxSize={"50px"} >
-                          <FaCss3Alt />
+                        className={
+                          colorMode === "light"
+                            ? styles.btn_light
+                            : styles.btn_dark
+                        }
+                        as={"a"}
+                        href="https://github.com/arulxavierax/Project-U2-YOOX"
+                        _hover={{ textDecoration: "none" }}
+                        target="_blank"
+                        w={"100px"}
+                      >
+                        {" "}
+                        GITHUB{" "}
+                        <span style={{ marginLeft: "10px" }}>
+                          <BsGithub />
+                        </span>
+                      </Button>
+                    </Box>
+                  </Box>
+                </Stack>
+              </Box>
+            </PriceWrapper>
+          </ScrollAnimation>
+
+          <ScrollAnimation
+            animateIn="animate__fadeInLeftBig"
+            animateOnce
+            duration={1.5}
+          >
+            <PriceWrapper>
+              <Box
+                maxW={"400px"}
+                w={"full"}
+                bg={useColorModeValue("white", "gray.900")}
+                boxShadow={"2xl"}
+                rounded={"md"}
+                p={6}
+                overflow={"hidden"}
+              >
+                <Box
+                  // h={'280px'}
+                  bg={"gray.100"}
+                  mt={-6}
+                  mx={-6}
+                  mb={6}
+                  pos={"relative"}
+                >
+                  <Image
+                    transform="scale(1.0)"
+                    width="100%"
+                    transition="0.3s ease-in-out"
+                    _hover={{
+                      transform: "scale(1.05)",
+                    }}
+                    h={"240px"}
+                    src="https://user-images.githubusercontent.com/104049398/190868611-1d2472d8-e07f-4984-b16e-9d2ddde4e281.png
+                "
+                    layout={"fill"}
+                  />
+                </Box>
+
+                <Stack pt={0} align={"center"}>
+                  <Heading
+                    color={"green.500"}
+                    textTransform={"uppercase"}
+                    fontWeight={700}
+                    letterSpacing={1.1}
+                    fontSize={"2xl"}
+                    fontFamily={"body"}
+                  >
+                    bewakoof - Clone
+                  </Heading>
+                  <Text color={"gray.500"} fontSize={"16"}>
+                    Online shopping web application clothing for the latest
+                    fashion and accessory trends
+                  </Text>
+                </Stack>
+
+                <Stack marginTop={"2"} direction={"column"} align={"center"}>
+                  <Box>
+                    <Text fontWeight={800} fontSize={"xl"}>
+                      Tech stack
+                    </Text>
+                    <Box marginTop={"2"} display={"flex"} gap={"8"}>
+                      <Box>
+                        <Button
+                          boxSize={"50px"}
+                          fontSize={"20px"}
+                          color={"red"}
+                        >
+                          <FaHtml5 />
+                        </Button>
+                      </Box>
+
+                      <Button color="green" fontSize={"20px"} boxSize={"50px"}>
+                        <FaCss3Alt />
                       </Button>
                       <Button
-                      color="yellow.400"
-                    
-                      fontSize={'20px'}
-                        boxSize={"50px"} >
-                          <SiJavascript />
-                        </Button>
-                      
+                        color="yellow.400"
+                        fontSize={"20px"}
+                        boxSize={"50px"}
+                      >
+                        <SiJavascript />
+                      </Button>
+                    </Box>
                   </Box>
-          </Box>
 
-          <Divider mt={12} mb={12}  />
+                  <Divider mt={12} mb={12} />
 
-        <Box gap={8} display={'flex'}>
-          <Box>
-                <Button className={colorMode==="light"? styles.btn_light : styles.btn_dark} as={'a'} href="https://jazzy-cocada-65d352.netlify.app/" _hover={{textDecoration:"none" }} target='_blank' w={'100px'} >LIVE<span style={{ marginLeft:"10px" }}><BsLink45Deg /></span>  </Button>
-          </Box>
-          
-          <Box>
-          <Button className={colorMode==="light"? styles.btn_light : styles.btn_dark} as={'a'} href="https://github.com/11-DEEPAK-KUMAR-11/Bewakoof_website
-  " _hover={{textDecoration:"none" }} target='_blank'  w={'100px'}>  GITHUB <span style={{ marginLeft:"10px" }}><BsGithub/></span> </Button>    
-          </Box>
-        </Box>
-
-      </Stack>
-          </Box>
-        </PriceWrapper>
-        </ScrollAnimation>
-
-        <ScrollAnimation animateIn='animate__fadeInLeftBig' animateOnce duration={1.5}>
-        <PriceWrapper>
-        <Box
-          maxW={'400px'}
-          w={'full'}
-          // width={'auto'}
-          bg={useColorModeValue('white', 'gray.900')}
-          boxShadow={'2xl'}
-          rounded={'md'}
-          p={6}
-          overflow={'hidden'}>
-          <Box
-            // h={'280px'}
-            bg={'gray.100'}
-            mt={-6}
-            mx={-6}
-            mb={6}
-            pos={'relative'}>
-            <Image
-            transform="scale(1.0)"
-            width="100%"
-            transition="0.3s ease-in-out"
-            _hover={{
-              transform: 'scale(1.05)',
-            }}
-            h={'240px'}
-              src='https://user-images.githubusercontent.com/104049398/190869884-4e009c70-e1ef-473f-b4cc-09bb620b6454.png'
-              layout={'fill'}
-            />
-          </Box>
-                  
-  <Stack pt={0} align={'center'}>
-  <Heading
- color={'green.500'}
-              textTransform={'uppercase'}
-              fontWeight={700}
-              letterSpacing={1.1} fontSize={'2xl'} fontFamily={'body'} >
-      Toggl-Track Clone
-    </Heading>
-    <Text color={'gray.500'} fontSize={'16'} >
-    A web application for Time tracking for better work, not overwork.
-    </Text>
-    </Stack>
-    
-    <Stack marginTop={'2'}  direction={'column'} align={'center'}>
-    
-        <Box>
-        <Text fontWeight={800} fontSize={'xl'}>
-        Tech stack
-        </Text>
-               <Box marginTop={'2'}  display={"flex"} gap={'8'}>
-                  
-                   <Box>
-                    <Button
-                    boxSize={'50px'}
-                        fontSize={'20px'}
-                        color={'red'}>
-                    <FaHtml5 />
-                  </Button>
+                  <Box gap={8} display={"flex"}>
+                    <Box>
+                      <Button
+                        className={
+                          colorMode === "light"
+                            ? styles.btn_light
+                            : styles.btn_dark
+                        }
+                        as={"a"}
+                        href="https://jazzy-cocada-65d352.netlify.app/"
+                        _hover={{ textDecoration: "none" }}
+                        target="_blank"
+                        w={"100px"}
+                      >
+                        LIVE
+                        <span style={{ marginLeft: "10px" }}>
+                          <BsLink45Deg />
+                        </span>{" "}
+                      </Button>
                     </Box>
-                    
-                    <Button
-                    color="green"
-                    fontSize={'20px'}
-                       boxSize={"50px"} >
+
+                    <Box>
+                      <Button
+                        className={
+                          colorMode === "light"
+                            ? styles.btn_light
+                            : styles.btn_dark
+                        }
+                        as={"a"}
+                        href="https://github.com/11-DEEPAK-KUMAR-11/Bewakoof_website
+  "
+                        _hover={{ textDecoration: "none" }}
+                        target="_blank"
+                        w={"100px"}
+                      >
+                        {" "}
+                        GITHUB{" "}
+                        <span style={{ marginLeft: "10px" }}>
+                          <BsGithub />
+                        </span>{" "}
+                      </Button>
+                    </Box>
+                  </Box>
+                </Stack>
+              </Box>
+            </PriceWrapper>
+          </ScrollAnimation>
+
+          <ScrollAnimation
+            animateIn="animate__fadeInLeftBig"
+            animateOnce
+            duration={1.5}
+          >
+            <PriceWrapper>
+              <Box
+                maxW={"400px"}
+                w={"full"}
+                // width={'auto'}
+                bg={useColorModeValue("white", "gray.900")}
+                boxShadow={"2xl"}
+                rounded={"md"}
+                p={6}
+                overflow={"hidden"}
+              >
+                <Box
+                  // h={'280px'}
+                  bg={"gray.100"}
+                  mt={-6}
+                  mx={-6}
+                  mb={6}
+                  pos={"relative"}
+                >
+                  <Image
+                    transform="scale(1.0)"
+                    width="100%"
+                    transition="0.3s ease-in-out"
+                    _hover={{
+                      transform: "scale(1.05)",
+                    }}
+                    h={"240px"}
+                    src="https://user-images.githubusercontent.com/104049398/190869884-4e009c70-e1ef-473f-b4cc-09bb620b6454.png"
+                    layout={"fill"}
+                  />
+                </Box>
+
+                <Stack pt={0} align={"center"}>
+                  <Heading
+                    color={"green.500"}
+                    textTransform={"uppercase"}
+                    fontWeight={700}
+                    letterSpacing={1.1}
+                    fontSize={"2xl"}
+                    fontFamily={"body"}
+                  >
+                    Toggl-Track Clone
+                  </Heading>
+                  <Text color={"gray.500"} fontSize={"16"}>
+                    A web application for Time tracking for better work, not
+                    overwork.
+                  </Text>
+                </Stack>
+
+                <Stack marginTop={"2"} direction={"column"} align={"center"}>
+                  <Box>
+                    <Text fontWeight={800} fontSize={"xl"}>
+                      Tech stack
+                    </Text>
+                    <Box marginTop={"2"} display={"flex"} gap={"8"}>
+                      <Box>
+                        <Button
+                          boxSize={"50px"}
+                          fontSize={"20px"}
+                          color={"red"}
+                        >
+                          <FaHtml5 />
+                        </Button>
+                      </Box>
+
+                      <Button color="green" fontSize={"20px"} boxSize={"50px"}>
                         <FaCss3Alt />
-                    </Button>
-                    <Button
-                    color="yellow.400"
-                   
-                    fontSize={'20px'}
-                       boxSize={"50px"} >
+                      </Button>
+                      <Button
+                        color="yellow.400"
+                        fontSize={"20px"}
+                        boxSize={"50px"}
+                      >
                         <SiJavascript />
-                       </Button>
-                </Box>
-        </Box>
-
-        <Divider mt={12} mb={12}  />
-
-      <Box gap={8} display={'flex'}>
-        <Box>
-              <Button className={colorMode==="light"? styles.btn_light : styles.btn_dark} as={'a'} href="https://toggl-track-by-gas-face-3608.netlify.app/" _hover={{textDecoration:"none" }} target='_blank' w={'100px'} >LIVE<span style={{ marginLeft:"10px" }}><BsLink45Deg /></span></Button>
-        </Box>
-        
-        <Box>
-        <Button className={colorMode==="light"? styles.btn_light : styles.btn_dark} as={'a'} href="https://github.com/abhijitnr/-gas-face-3608" _hover={{textDecoration:"none" }} target='_blank'  w={'100px'}> GITHUB <span style={{ marginLeft:"10px" }}><BsGithub/></span></Button>    
-        </Box>
-      </Box>
-
-    </Stack>
-        </Box>
-        </PriceWrapper>
-        </ScrollAnimation>
-
-        <ScrollAnimation animateIn='animate__fadeInRightBig' animateOnce duration={1.5}>
-        <PriceWrapper>
-        <Box
-          maxW={'400px'}
-          w={'full'}
-          // width={'auto'}
-          bg={useColorModeValue('white', 'gray.900')}
-          boxShadow={'2xl'}
-          rounded={'md'}
-          p={6}
-          overflow={'hidden'}>
-          <Box
-            // h={'280px'}
-            bg={'gray.100'}
-            mt={-6}
-            mx={-6}
-            mb={6}
-            pos={'relative'}>
-            <Image
-            transform="scale(1.0)"
-            width="100%"
-            transition="0.3s ease-in-out"
-            _hover={{
-              transform: 'scale(1.05)',
-            }}
-            h={'210px'}
-              src='https://user-images.githubusercontent.com/75201337/200176709-f72a2d08-b2ce-4946-bb16-034f539fc6bb.png'
-              layout={'fill'}
-            />
-          </Box>
-                  
-  <Stack pt={0} align={'center'}>
-  <Heading
- color={'green.500'}
-              textTransform={'uppercase'}
-              fontWeight={700}
-              letterSpacing={1.1} fontSize={'2xl'} fontFamily={'body'} >
-      Clockify-Clockify
-    </Heading>
-    <Text color={'gray.500'} fontSize={'16'} >
-    A web Application for time tracking and timeSheet. Unlike all the other time trackers, Clockify lets you have an unlimited access.
-    </Text>
-    </Stack>
-    
-    <Stack marginTop={'2'}  direction={'column'} align={'center'}>
-    
-        <Box>
-        <Text fontWeight={800} fontSize={'xl'}>
-        Tech stack
-        </Text>
-               <Box marginTop={'2'}  display={"flex"} gap={'8'}>
-                  
-                   <Box>
-                    <Button
-                    boxSize={'50px'}
-                        fontSize={'20px'}
-                        color={'blue.400'}>
-                    <FaReact />
-                  </Button>
+                      </Button>
                     </Box>
-                    
-                    <Button
-                    color="red.500"
-                    fontSize={'20px'}
-                       boxSize={"50px"} >
-                        <SiRedux />
-                    </Button>
-                    <Button
-                    color="yellow.400"
-                   
-                    fontSize={'20px'}
-                       boxSize={"50px"} >
-                        <SiJavascript />
-                       </Button>
+                  </Box>
+
+                  <Divider mt={12} mb={12} />
+
+                  <Box gap={8} display={"flex"}>
+                    <Box>
+                      <Button
+                        className={
+                          colorMode === "light"
+                            ? styles.btn_light
+                            : styles.btn_dark
+                        }
+                        as={"a"}
+                        href="https://toggl-track-by-gas-face-3608.netlify.app/"
+                        _hover={{ textDecoration: "none" }}
+                        target="_blank"
+                        w={"100px"}
+                      >
+                        LIVE
+                        <span style={{ marginLeft: "10px" }}>
+                          <BsLink45Deg />
+                        </span>
+                      </Button>
+                    </Box>
+
+                    <Box>
+                      <Button
+                        className={
+                          colorMode === "light"
+                            ? styles.btn_light
+                            : styles.btn_dark
+                        }
+                        as={"a"}
+                        href="https://github.com/abhijitnr/-gas-face-3608"
+                        _hover={{ textDecoration: "none" }}
+                        target="_blank"
+                        w={"100px"}
+                      >
+                        {" "}
+                        GITHUB{" "}
+                        <span style={{ marginLeft: "10px" }}>
+                          <BsGithub />
+                        </span>
+                      </Button>
+                    </Box>
+                  </Box>
+                </Stack>
+              </Box>
+            </PriceWrapper>
+          </ScrollAnimation>
+
+          <ScrollAnimation
+            animateIn="animate__fadeInRightBig"
+            animateOnce
+            duration={1.5}
+          >
+            <PriceWrapper>
+              <Box
+                maxW={"400px"}
+                w={"full"}
+                // width={'auto'}
+                bg={useColorModeValue("white", "gray.900")}
+                boxShadow={"2xl"}
+                rounded={"md"}
+                p={6}
+                overflow={"hidden"}
+              >
+                <Box
+                  // h={'280px'}
+                  bg={"gray.100"}
+                  mt={-6}
+                  mx={-6}
+                  mb={6}
+                  pos={"relative"}
+                >
+                  <Image
+                    transform="scale(1.0)"
+                    width="100%"
+                    transition="0.3s ease-in-out"
+                    _hover={{
+                      transform: "scale(1.05)",
+                    }}
+                    h={"210px"}
+                    src="https://user-images.githubusercontent.com/75201337/200176709-f72a2d08-b2ce-4946-bb16-034f539fc6bb.png"
+                    layout={"fill"}
+                  />
                 </Box>
-        </Box>
 
-        <Divider mt={12} mb={12}  />
+                <Stack pt={0} align={"center"}>
+                  <Heading
+                    color={"green.500"}
+                    textTransform={"uppercase"}
+                    fontWeight={700}
+                    letterSpacing={1.1}
+                    fontSize={"2xl"}
+                    fontFamily={"body"}
+                  >
+                    Clockify-Clockify
+                  </Heading>
+                  <Text color={"gray.500"} fontSize={"16"}>
+                    A web Application for time tracking and timeSheet. Unlike
+                    all the other time trackers, Clockify lets you have an
+                    unlimited access.
+                  </Text>
+                </Stack>
 
-      <Box gap={8} display={'flex'}>
-        <Box>
-              <Button className={colorMode==="light"? styles.btn_light : styles.btn_dark} as={'a'} href="https://clockify-clone.vercel.app/" _hover={{textDecoration:"none" }} target='_blank' w={'100px'} >LIVE<span style={{ marginLeft:"10px" }}><BsLink45Deg /></span></Button>
-        </Box>
-        
-        <Box>
-        <Button className={colorMode==="light"? styles.btn_light : styles.btn_dark} as={'a'} href="https://github.com/mdharis107/Clockify-Clockify" _hover={{textDecoration:"none" }} target='_blank'  w={'100px'}> GITHUB <span style={{ marginLeft:"10px" }}><BsGithub/></span></Button>    
-        </Box>
-      </Box>
+                <Stack marginTop={"2"} direction={"column"} align={"center"}>
+                  <Box>
+                    <Text fontWeight={800} fontSize={"xl"}>
+                      Tech stack
+                    </Text>
+                    <Box marginTop={"2"} display={"flex"} gap={"8"}>
+                      <Box>
+                        <Button
+                          boxSize={"50px"}
+                          fontSize={"20px"}
+                          color={"blue.400"}
+                        >
+                          <FaReact />
+                        </Button>
+                      </Box>
 
-    </Stack>
-        </Box>
-        </PriceWrapper>
-        </ScrollAnimation>
+                      <Button
+                        color="red.500"
+                        fontSize={"20px"}
+                        boxSize={"50px"}
+                      >
+                        <SiRedux />
+                      </Button>
+                      <Button
+                        color="yellow.400"
+                        fontSize={"20px"}
+                        boxSize={"50px"}
+                      >
+                        <SiJavascript />
+                      </Button>
+                    </Box>
+                  </Box>
 
+                  <Divider mt={12} mb={12} />
+
+                  <Box gap={8} display={"flex"}>
+                    <Box>
+                      <Button
+                        className={
+                          colorMode === "light"
+                            ? styles.btn_light
+                            : styles.btn_dark
+                        }
+                        as={"a"}
+                        href="https://clockify-clone.vercel.app/"
+                        _hover={{ textDecoration: "none" }}
+                        target="_blank"
+                        w={"100px"}
+                      >
+                        LIVE
+                        <span style={{ marginLeft: "10px" }}>
+                          <BsLink45Deg />
+                        </span>
+                      </Button>
+                    </Box>
+
+                    <Box>
+                      <Button
+                        className={
+                          colorMode === "light"
+                            ? styles.btn_light
+                            : styles.btn_dark
+                        }
+                        as={"a"}
+                        href="https://github.com/mdharis107/Clockify-Clockify"
+                        _hover={{ textDecoration: "none" }}
+                        target="_blank"
+                        w={"100px"}
+                      >
+                        {" "}
+                        GITHUB{" "}
+                        <span style={{ marginLeft: "10px" }}>
+                          <BsGithub />
+                        </span>
+                      </Button>
+                    </Box>
+                  </Box>
+                </Stack>
+              </Box>
+            </PriceWrapper>
+          </ScrollAnimation>
         </SimpleGrid>
-  
       </Stack>
 
       {/* <Center>
