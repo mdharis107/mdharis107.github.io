@@ -21,18 +21,22 @@ export default function Home({ homeRef, colorMode }) {
 
   const handleDownload = () => {
     // using Java Script method to get PDF file
-    fetch("MohamedHaris.pdf").then((response) => {
+    fetch("Mohamed_Haris_Resume.pdf").then((response) => {
       response.blob().then((blob) => {
         // Creating new object of PDF file
         const fileURL = window.URL.createObjectURL(blob);
         // Setting various property values
         let alink = document.createElement("a");
         alink.href = fileURL;
-        alink.download = "MohamedHaris.pdf";
+        alink.download = "Mohamed_Haris_Resume.pdf";
         alink.click();
       });
     });
-    window.open("https://drive.google.com/file/d/1qMnwNd1uqkUwpb5eHR76eVI8HpTfsuMM/view?usp=sharing", '_blank', 'noopener,noreferrer');
+    window.open(
+      "https://drive.google.com/file/d/1qMnwNd1uqkUwpb5eHR76eVI8HpTfsuMM/view?usp=sharing",
+      "_blank",
+      "noopener,noreferrer"
+    );
   };
   return (
     <Center ref={homeRef}>
