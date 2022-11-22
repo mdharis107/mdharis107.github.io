@@ -19,7 +19,7 @@ import {
   SiCss3,
   SiRedux,
   SiExpress,
-  SiMongodb
+  SiMongodb,
 } from "react-icons/si";
 // import {SiExpress} from "react-icons/si"
 import {
@@ -29,7 +29,7 @@ import {
   FaCss3Alt,
   FaBootstrap,
 } from "react-icons/fa";
-import { GrHeroku,  } from "react-icons/gr";
+import { GrHeroku } from "react-icons/gr";
 import { BsGithub } from "react-icons/bs";
 import GitHubCalendar from "react-github-calendar";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -119,7 +119,6 @@ export default function Skills({ colorMode, skillsRef }) {
       icon: <SiMongodb />,
       color: "#43853d",
     },
-    
   ];
 
   // const BackEnd = [
@@ -268,7 +267,7 @@ export default function Skills({ colorMode, skillsRef }) {
         <ScrollAnimation animateIn="animate__fadeIn" duration={1.5} animateOnce>
           <Center mb={10}>
             <GitHubCalendar
-              color={colorMode === "light" ? "grey" : "#5ab9ea"}
+              color={colorMode === "light" ? "#46344E" : "#5ab9ea"}
               username="mdharis107"
             />
           </Center>
@@ -276,24 +275,51 @@ export default function Skills({ colorMode, skillsRef }) {
           <Grid
             mb={10}
             rowGap={8}
+            columnGap={8}
+            gridTemplateColumns={"repeat(2, 1fr)"}
             justifyContent={"center"}
             alignItems={"center"}
           >
             {/* <Center> */}
-            <Image
-              w={{ base: "200", sm: "100", md: "100" }}
-              align="center"
-              src="https://github-readme-streak-stats.herokuapp.com/?user=mdharis107&theme=radical"
-              alt="haris"
-            />
+            <Box>
+              <Image
+              
+              transition="all .5s ease-in-out"
+              _hover={{
+                transform: "scale(1.1)",
+                boxShadow:
+                  "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
+              }}
+                w={{ base: "200", sm: "100", md: "100" }}
+                align="center"
+                src="https://github-readme-streak-stats.herokuapp.com/?user=mdharis107&theme=tokyonight"
+                alt="haris"
+              />
+            </Box>
+            <Box>
+              <Image
+                transition="all .5s ease-in-out"
+                _hover={{
+                  transform: "scale(1.1)",
+                  boxShadow:
+                    "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
+                }}
+                w={{ base: "100", sm: "100", md: "100" }}
+                align="center"
+                src="https://github-readme-stats.vercel.app/api?username=mdharis107&theme=tokyonight&hide_border=false&include_all_commits=false&count_private=true"
+                alt="haris"
+              />
+            </Box>
             {/* </Center> */}
-            <Image
-              w={{ base: "100", sm: "100", md: "100" }}
-              align="center"
-              src="https://github-readme-stats.vercel.app/api?username=mdharis107&theme=radical&hide_border=false&include_all_commits=false&count_private=true"
-              alt="haris"
-            />
           </Grid>
+
+          <Box>
+            <Image
+              src={
+                "https://activity-graph.herokuapp.com/graph?username=mdharis107&theme=github&hide_border=false"
+              }
+            />
+          </Box>
         </ScrollAnimation>
       </VStack>
     </Box>

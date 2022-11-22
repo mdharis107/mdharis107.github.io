@@ -18,6 +18,7 @@ import {
   InputGroup,
   InputLeftElement,
   Textarea,
+  Link,
  
 } from '@chakra-ui/react';
 import {
@@ -41,6 +42,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 
 export default function Contact({colorMode, contactRef}) {
 
+  // const navigate = useNavigate() 
   const form = useRef();
 
   const sendEmail =(e)=>{
@@ -93,6 +95,8 @@ export default function Contact({colorMode, contactRef}) {
                         height="48px"
                         width="250px"
                         variant="ghost"
+                        as={'a'}
+                        href="tel:9080855112"
                         color={colorMode==="light"? "#1a202c" : "white"}
                         _hover={{ border: '2px solid #1C6FEB' }}
                         leftIcon={<MdPhone color="#1970F1" size="20px" />}>
