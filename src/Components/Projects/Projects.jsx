@@ -200,8 +200,7 @@ export default function Project({ colorMode, projectRef }) {
                     YOOX - Clone
                   </Heading>
                   <Text color={"gray.500"} fontSize={"16"}>
-                    A clothing online shopping web application for men, women
-                    and kids
+                  A clothing online shopping web application for men, women, and kids
                   </Text>
                 </Stack>
 
@@ -604,9 +603,9 @@ export default function Project({ colorMode, projectRef }) {
                     Clockify-Clockify
                   </Heading>
                   <Text color={"gray.500"} fontSize={"16"}>
-                    A web Application for time tracking and timeSheet. Unlike
-                    all the other time trackers, Clockify lets you have an
-                    unlimited access.
+                  A web Application for time tracking and time sheet. 
+                  Unlike all the other time trackers, 
+                  Clockify lets you have unlimited access.
                   </Text>
                 </Stack>
 

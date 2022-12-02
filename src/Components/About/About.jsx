@@ -90,11 +90,12 @@ import {
               <li>I am a self-driven and skilled in JavaScript, React and Redux and also familiar with front-end frameworks.</li>
               <li>I have also worked on NodeJs, Express, and MongoDB DataBase. </li>
             </ul> */}
-                    Aspiring Full-Stack Developer, skilled in both front-end and back-end web development.
-                    I have worked on several projects collaboratively and solely. I love to work on exciting projects that test my abitliy.
-                    I am a self-driven and skilled in JavaScript, React and Redux and also familiar with front-end frameworks. 
-                    I have also worked on NodeJs, Express, and MongoDB DataBase. 
-                    I am looking forward for a postion where I can enhance my coding and problem solving ability.  
+                   Aspiring Full-Stack Developer, skilled in both front-end and back-end web development. 
+                   I have worked on several projects collaboratively and solely. 
+                   I love to work on exciting projects that test my ability. 
+                   I am self-driven and skilled in JavaScript, React, and Redux, and also familiar with front-end frameworks. 
+                   I have also worked on NodeJs, Express, and MongoDB DataBase.
+                    I look forward to a position where I can enhance my coding and problem-solving ability. 
                    
             </Text>
             </ScrollAnimation>
