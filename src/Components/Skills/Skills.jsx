@@ -121,41 +121,6 @@ export default function Skills({ colorMode, skillsRef }) {
     },
   ];
 
-  // const BackEnd = [
-  //   {
-  //     name: "NodeJs",
-  //     link: "https://nodejs.org/en/",
-  //     icon: <SiNodedotjs />,
-  //     color: "red.500",
-  //   },
-  // ]
-
-  // const hosting = [
-  //   {
-  //     name: "Git",
-  //     link: "https://git-scm.com/",
-  //     icon: <FaGitAlt />,
-  //     color: "red.500",
-  //   },
-  //   {
-  //     name: "NodeJs",
-  //     link: "https://nodejs.org/en/",
-  //     icon: <SiNodedotjs />,
-  //     color: "red.500",
-  //   },
-  //   {
-  //     name: "Git",
-  //     link: "https://git-scm.com/",
-  //     icon: <FaGitAlt />,
-  //     color: "red.500",
-  //   },
-  //   {
-  //     name: "NodeJs",
-  //     link: "https://nodejs.org/en/",
-  //     icon: <SiNodedotjs />,
-  //     color: "red.500",
-  //   },
-  // ]
   return (
     <Box
       ref={skillsRef}
@@ -171,18 +136,6 @@ export default function Skills({ colorMode, skillsRef }) {
       paddingBottom="1px"
       paddingTop={"10px"}
     >
-      {/* <Divider mt={12} mb={12} /> */}
-      {/* {colorMode==="light"? "": <Divider mt={12} mb={12} /> }  */}
-      {/* <Grid
-        templateColumns={{
-          base: 'repeat(1, 1fr)',
-          sm: 'repeat(2, 1fr)',
-          md: 'repeat(2, 1fr)',
-        }}
-        gap={4}> */}
-      {/* <GridItem colSpan={1}> */}
-      {/* <VStack alignItems="flex-start" spacing="20px">
-            <chakra.h2 fontSize="3xl" fontWeight="700"> */}
       <ScrollAnimation animateIn="animate__bounceInDown" animateOnce>
         <Center>
           <Heading
@@ -197,17 +150,8 @@ export default function Skills({ colorMode, skillsRef }) {
           </Heading>
         </Center>
       </ScrollAnimation>
-      {/* </chakra.h2>
-          </VStack> */}
-      {/* </GridItem> */}
 
-      {/* </Grid> */}
       <Divider mt={12} mb={12} />
-      {/* <Center marginBottom={'10'}>
-            <Heading alignContent='center'  >
-            Front End
-            </Heading>
-      </Center> */}
 
       <Grid
         w={"100%"}
@@ -227,7 +171,6 @@ export default function Skills({ colorMode, skillsRef }) {
               <Button
                 className={styles.anim}
                 background="linear-gradient(to left, #33ccff 0%, #ff99cc 100%)"
-                // transition='all 2s'
                 variant={"outline"}
                 boxSize={"150px"}
                 color="#F2F2F2"
@@ -283,13 +226,12 @@ export default function Skills({ colorMode, skillsRef }) {
             {/* <Center> */}
             <Box>
               <Image
-              
-              transition="all .5s ease-in-out"
-              _hover={{
-                transform: "scale(1.1)",
-                boxShadow:
-                  "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
-              }}
+                transition="all .5s ease-in-out"
+                _hover={{
+                  transform: "scale(1.1)",
+                  boxShadow:
+                    "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
+                }}
                 w={{ base: "200", sm: "100", md: "100" }}
                 align="center"
                 src="https://github-readme-streak-stats.herokuapp.com/?user=mdharis107&theme=tokyonight"
@@ -313,13 +255,13 @@ export default function Skills({ colorMode, skillsRef }) {
             {/* </Center> */}
           </Grid>
 
-          <Box>
+          {/* <Box border={"1px solid white"}>
             <Image
               src={
                 "https://activity-graph.herokuapp.com/graph?username=mdharis107&theme=github&hide_border=false"
               }
             />
-          </Box>
+          </Box> */}
         </ScrollAnimation>
       </VStack>
     </Box>
