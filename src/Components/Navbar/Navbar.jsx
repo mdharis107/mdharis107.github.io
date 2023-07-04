@@ -31,7 +31,7 @@ export default function Navbar({
       {/* radial-gradient(circle, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1) */}
 
       <Box
-        // border={"1px solid red"}
+      
         borderBottom={useColorModeValue("white 2px solid ", " 2px solid gray")}
         w={"100%"}
         bg={useColorModeValue(
@@ -40,9 +40,10 @@ export default function Navbar({
         )}
         position="sticky"
         top={0}
-        zIndex={999}
+        zIndex={1}
         px={4}
       >
+
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <IconButton
             size={"md"}
@@ -157,6 +158,7 @@ export default function Navbar({
             </Stack>
           </Flex>
         </Flex>
+
         {isOpen ? (
           <Center>
             <Box w={"100%"} pb={4} display={{ md: "none" }}>

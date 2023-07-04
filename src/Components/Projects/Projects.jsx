@@ -17,6 +17,7 @@ import {
   Image,
   Divider,
   SimpleGrid,
+  Tooltip,
 } from "@chakra-ui/react";
 import ScrollAnimation from "react-animate-on-scroll";
 
@@ -200,7 +201,8 @@ export default function Project({ colorMode, projectRef }) {
                     YOOX - Clone
                   </Heading>
                   <Text color={"gray.500"} fontSize={"16"}>
-                  A clothing online shopping web application for men, women, and kids
+                    A clothing online shopping web application for men, women,
+                    and kids
                   </Text>
                 </Stack>
 
@@ -557,7 +559,7 @@ export default function Project({ colorMode, projectRef }) {
           <ScrollAnimation
             animateIn="animate__fadeInRightBig"
             animateOnce
-            duration={1.5}
+            // duration={1.5}
           >
             <PriceWrapper>
               <Box
@@ -603,9 +605,9 @@ export default function Project({ colorMode, projectRef }) {
                     Clockify-Clockify
                   </Heading>
                   <Text color={"gray.500"} fontSize={"16"}>
-                  A web Application for time tracking and time sheet. 
-                  Unlike all the other time trackers, 
-                  Clockify lets you have unlimited access.
+                    A web Application for time tracking and time sheet. Unlike
+                    all the other time trackers, Clockify lets you have
+                    unlimited access.
                   </Text>
                 </Stack>
 
@@ -690,10 +692,144 @@ export default function Project({ colorMode, projectRef }) {
               </Box>
             </PriceWrapper>
           </ScrollAnimation>
+
+          <ScrollAnimation
+            animateIn="animate__fadeInLeftBig"
+            animateOnce
+            // duration={1.5}
+          >
+            <PriceWrapper>
+              <Box
+                maxW={"400px"}
+                w={"full"}
+                // width={'100%'}
+                bg={useColorModeValue("white", "gray.900")}
+                boxShadow={"2xl"}
+                rounded={"md"}
+                p={6}
+                overflow={"hidden"}
+              >
+                <Box
+                  // h={'280px'}
+                  bg={"gray.100"}
+                  mt={-6}
+                  mx={-6}
+                  mb={6}
+                  pos={"relative"}
+                >
+                  <Image
+                    transform="scale(1.0)"
+                    width="100%"
+                    transition="0.3s ease-in-out"
+                    _hover={{
+                      transform: "scale(1.05)",
+                    }}
+                    h={"240px"}
+                    src={
+                      "https://github.com/mdharis107/MERN-Stack-Chat-App/assets/104049398/b30647e1-ef54-47d6-987f-994fb2f6aac8"
+                    }
+                    layout={"fill"}
+                  />
+                </Box>
+
+                <Stack pt={0} align={"center"}>
+                  <Heading
+                    color={"green.500"}
+                    textTransform={"uppercase"}
+                    fontWeight={700}
+                    letterSpacing={1.1}
+                    fontSize={"2xl"}
+                    fontFamily={"body"}
+                  >
+                    MERN-Chat App
+                  </Heading>
+                  <Text color={"gray.500"} fontSize={"16"}>
+                    A real time chat application where you can send message in
+                    one on one chat or group chat
+                  </Text>
+                </Stack>
+
+                <Stack marginTop={"2"} direction={"column"} align={"center"}>
+                  <Box>
+                    <Text fontWeight={800} fontSize={"xl"}>
+                      Tech stack
+                    </Text>
+                    <Box marginTop={"2"} display={"flex"} gap={"5"}>
+                      <Tooltip hasArrow label="React" placement="top">
+                        <Button
+                          boxSize={"50px"}
+                          fontSize={"20px"}
+                          color={"blue.400"}
+                        >
+                          <FaReact />
+                        </Button>
+                      </Tooltip>
+
+                      {/* <Button color="green" fontSize={"20px"} boxSize={"50px"}>
+                        <FaCss3Alt />
+                      </Button> */}
+
+                      {/* <Button
+                        color="yellow.400"
+                        fontSize={"20px"}
+                        boxSize={"50px"}
+                      >
+                        <SiJavascript />
+                      </Button> */}
+                    </Box>
+                  </Box>
+
+                  <Divider mt={12} mb={12} />
+
+                  <Box gap={8} display={"flex"}>
+                    <Box>
+                      <Button
+                        className={
+                          colorMode === "light"
+                            ? styles.btn_light
+                            : styles.btn_dark
+                        }
+                        as={"a"}
+                        href="https://frontend-fkbcw7rq2-mdharis107.vercel.app/"
+                        _hover={{ textDecoration: "none" }}
+                        target="_blank"
+                        w={"100px"}
+                      >
+                        LIVE
+                        <span style={{ marginLeft: "10px" }}>
+                          <BsLink45Deg />
+                        </span>
+                      </Button>
+                    </Box>
+
+                    <Box>
+                      <Button
+                        className={
+                          colorMode === "light"
+                            ? styles.btn_light
+                            : styles.btn_dark
+                        }
+                        as={"a"}
+                        href="https://github.com/mdharis107/MERN-Stack-Chat-App"
+                        _hover={{ textDecoration: "none" }}
+                        target="_blank"
+                        w={"100px"}
+                      >
+                        GITHUB
+                        <span style={{ marginLeft: "10px" }}>
+                          <BsGithub />
+                        </span>
+                      </Button>
+                    </Box>
+                  </Box>
+                </Stack>
+              </Box>
+            </PriceWrapper>
+          </ScrollAnimation>
         </SimpleGrid>
       </Stack>
 
-      {/* <Center>
+      {/* <Center> 
       <Box width={'60%'}  >
     
       </Box>
