@@ -84,15 +84,7 @@ export default function Home({ homeRef, colorMode }) {
                   className={styles.btn_flip}
                   data-back={"RESUME"}
                   data-front="RESUME"
-                  //   _hover={{
-                  // transition:'all 5s',
-                  //   textDecoration:'none',
-                  //     color:"black",
-                  //     background:'linear-gradient(to left, #33ccff 0%, #ff99cc 100%)'
-                  //   }}
-
-                  //  background='linear-gradient(to right, #33ccff 0%, #ff99cc 100%)'
-                  // transition='all 5s'
+                
                 ></button>
                 {/* </Link> */}
               </Box>

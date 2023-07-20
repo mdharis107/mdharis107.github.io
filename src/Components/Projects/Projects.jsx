@@ -1,5 +1,10 @@
 import styles from "./Project.module.css";
-import { SiJavascript } from "react-icons/si";
+import {
+  SiExpress,
+  SiJavascript,
+  SiMongodb,
+  SiNodedotjs,
+} from "react-icons/si";
 import { FaHtml5, FaCss3Alt, FaBootstrap, FaReact } from "react-icons/fa";
 import { SiRedux } from "react-icons/si";
 
@@ -764,18 +769,33 @@ export default function Project({ colorMode, projectRef }) {
                           <FaReact />
                         </Button>
                       </Tooltip>
-
-                      {/* <Button color="green" fontSize={"20px"} boxSize={"50px"}>
-                        <FaCss3Alt />
-                      </Button> */}
-
-                      {/* <Button
-                        color="yellow.400"
-                        fontSize={"20px"}
-                        boxSize={"50px"}
-                      >
-                        <SiJavascript />
-                      </Button> */}
+                      <Tooltip hasArrow label="Node js" placement="top">
+                        <Button
+                          boxSize={"50px"}
+                          fontSize={"20px"}
+                          color={"green.500"}
+                        >
+                          <SiNodedotjs />
+                        </Button>
+                      </Tooltip>
+                      <Tooltip hasArrow label="MongoDB" placement="top">
+                        <Button
+                          boxSize={"50px"}
+                          fontSize={"20px"}
+                          color={"#43853d"}
+                        >
+                          <SiMongodb />
+                        </Button>
+                      </Tooltip>
+                      <Tooltip hasArrow label="Express js" placement="top">
+                        <Button
+                          boxSize={"50px"}
+                          fontSize={"20px"}
+                          color={"#444"}
+                        >
+                          <SiExpress />
+                        </Button>
+                      </Tooltip>
                     </Box>
                   </Box>
 
